@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  margin-top: 44px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  height: 20px;
+  width: 76px;
+  left: 12px;
+  top: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6070ff;
+  margin-left: 35px;
+}
+
+#burger {
+  width: 18px;
+  height: 12px;
+  left: 4px;
+  top: 17px;
+  margin-right: 35px;
+}
