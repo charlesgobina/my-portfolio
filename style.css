@@ -28,7 +28,7 @@ nav {
   font-size: 16px;
   line-height: 20px;
   color: #6070ff;
-  margin-left: 35px;
+  margin-left: 24px;
 }
 
 #burger {
@@ -36,5 +36,175 @@ nav {
   height: 12px;
   left: 4px;
   top: 17px;
-  margin-right: 35px;
+  margin-right: 24px;
+}
+
+#me {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#greetings {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 114px;
+}
+
+#hello-greeting {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  color: #172b4d;
+  line-height: 52px;
+  text-align: left;
+  left: 24px;
+  top: 114px;
+}
+
+#brief-intro {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 12px;
+}
+
+#about-me {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #344563;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+#connect {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 12px;
+}
+
+#conn {
+  font-family: 'Poppins', sans-serif;
+  color: #7f8cff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+#socials {
+  margin-top: 12px;
+}
+
+#twitter {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+#linkedin {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+#mail {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+#github {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+#insta {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+#elipse-one {
+  position: absolute;
+  left: 310px;
+  top: 152.24px;
+}
+
+#rectangle-two {
+  position: absolute;
+  left: 127.18px;
+  top: 151.59px;
+}
+
+#rectangle-one {
+  position: absolute;
+  left: 265px;
+  top: 130.79px;
+}
+
+#rec-down {
+  position: absolute;
+  left: 191.82px;
+  top: 630px;
+}
+
+#semi-one {
+  position: absolute;
+  left: 16.04px;
+  top: 161.47px;
+}
+
+#circle-one {
+  position: absolute;
+  left: 128.98px;
+  top: 160.81px;
+}
+
+#circle-two {
+  position: absolute;
+  left: 298px;
+  top: 315px;
+}
+
+#circle-five {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 237px;
+  top: 625.1px;
+}
+
+#circle-three {
+  position: absolute;
+  left: 53px;
+  top: 645px;
+}
+
+#circle-four {
+  position: absolute;
+  left: 214px;
+  top: 110px;
+}
+
+#semi-two {
+  position: absolute;
+  left: 325.76px;
+  top: 546.69px;
+}
+
+#rectangle-three {
+  position: absolute;
+  left: 20px;
+  top: 141.49px;
+}
+
+#donut {
+  position: absolute;
+  left: 322.18px;
+  top: 560.44px;
+}
+
+.content-wrapper {
+  height: 100vh;
 }
