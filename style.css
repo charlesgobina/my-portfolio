@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  margin-top: 44px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  height: 20px;
+  width: 76px;
+  left: 12px;
+  top: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6070ff;
+  margin-left: 24px;
+  text-decoration: none;
+}
+
+#burger {
+  width: 18px;
+  height: 12px;
+  left: 4px;
+  top: 17px;
+  margin-right: 24px;
+  text-decoration: none;
+}
+
+.me {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: url(./assets/images/header-shapes\ mobile.png) #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.onme {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 114px;
+}
+
+.hello-greeting {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  color: #172b4d;
+  line-height: 52px;
+  text-align: left;
+  left: 24px;
+  top: 114px;
+}
+
+.about-me {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #344563;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-right: 24px;
+  margin-top: 12px;
+}
+
+.conn {
+  font-family: 'Poppins', sans-serif;
+  color: #7f8cff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  margin-right: 24px;
+  margin-top: 12px;
+}
+
+.socials {
+  margin-top: 12px;
+}
+
+.socials li {
+  list-style: none;
+  display: inline-block;
+}
+
+#twitter {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+#linkedin {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+#mail {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+#github {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+#insta {
+  color: #505f79;
+  margin-right: 19px;
+}
+
+.content-wrapper {
+  height: 100vh;
+}
