@@ -6,8 +6,6 @@
 }
 
 body {
-  width: 100vw;
-  overflow-x: hidden;
   background: #f7f7f9;
 }
 
@@ -118,37 +116,35 @@ nav {
 }
 
 .projects {
-  margin-left: 24px;
-  margin-right: 24px;
   display: grid;
-  grid-template: repeat(4, 1fr) / 100%;
-  grid-row-gap: 88px;
-}
-
-.one-card {
+  grid-template-columns: 100%;
   margin-top: 114px;
+  justify-content: center;
+  align-items: center;
+  gap: 88px 0;
+  height: 100%;
 }
 
 .cards {
   display: flex;
   flex-direction: column;
-  align-items: center;
   border: 1px solid #dfe1e6;
-  box-sizing: border-box;
   border-radius: 16px;
-  width: 100%;
-  height: 596px;
   background-color: #fff;
+  margin-left: 24px;
+  margin-right: 24px;
+  max-width: max-content;
 }
 
 figure {
   margin-top: 16px;
-  margin-left: 16px;
-  margin-right: 16px;
 }
 
 img {
   width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
 }
 
 .image-wrapper {
@@ -159,6 +155,7 @@ img {
   margin-left: 16px;
   margin-right: 16px;
   margin-top: 12px;
+  max-width: 100%;
 }
 
 .tonic-one {
@@ -179,7 +176,12 @@ img {
 }
 
 .tonic-list li {
-  margin-right: 12px;
+  margin-right: 8px;
+}
+
+.wap {
+  white-space: nowrap;
+  color: #7a869a;
 }
 
 .langs li {
@@ -194,6 +196,7 @@ img {
   color: #6070ff;
   padding: 4px 12px;
   margin-bottom: 36px;
+  margin-right: 5px;
 }
 
 .work-info {
@@ -203,6 +206,7 @@ img {
   font-size: 13px;
   line-height: 16px;
   margin-top: 20px;
+  margin-right: 75px;
 }
 
 .tonic-para {
@@ -239,6 +243,7 @@ img {
   justify-content: center;
   background-color: #fff;
   border-top-right-radius: 15%;
+  margin-top: 114px;
 }
 
 .about-socials {
@@ -298,7 +303,7 @@ img {
 
 .stack-icons {
   height: 48px;
-  width: 48px;
+  width: 88px;
   margin-top: 9px;
   margin-bottom: 9px;
   margin-left: 12px;
