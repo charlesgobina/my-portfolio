@@ -170,9 +170,6 @@ img {
 
 .tonic-list {
   list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: start;
 }
 
 .tonic-list li {
@@ -197,6 +194,14 @@ img {
   padding: 4px 12px;
   margin-bottom: 36px;
   margin-right: 5px;
+}
+
+.list-one li {
+  float: left;
+}
+
+.list-two li {
+  float: left;
 }
 
 .work-info {
