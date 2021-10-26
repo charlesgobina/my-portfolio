@@ -236,6 +236,11 @@ img {
   margin-bottom: 40px;
 }
 
+.tonic-btn:hover {
+  background-color: #6070ff;
+  color: #fff;
+}
+
 .lint {
   display: flex;
   flex-direction: column;
