@@ -363,8 +363,7 @@ img {
 .footer {
   background: url(./assets/images/footer-background.svg) #6070ff;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: 100% 20%;
   border-top-left-radius: 100px;
   width: 100%;
   padding-top: 103px;
@@ -378,7 +377,7 @@ img {
   font-weight: 700;
   line-height: 52px;
   text-align: center;
-  margin-bottom: 12px ;
+  margin-bottom: 12px;
 }
 
 .footer .greeting-text {
@@ -408,7 +407,8 @@ footer .footer-form {
   gap: 20px;
 }
 
-.footer-form input, textarea {
+.footer-form input,
+textarea {
   width: 100%;
   padding: 15px;
   border: 1px solid #cfd8dc;
