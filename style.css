@@ -55,7 +55,7 @@ nav {
   background: url(./assets/images/header-shapes\ mobile@2x.svg) #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom-left-radius: 15%;
+  border-bottom-left-radius: 100px;
 }
 
 .onme {
@@ -242,7 +242,7 @@ img {
   align-items: flex-start;
   justify-content: center;
   background-color: #fff;
-  border-top-right-radius: 15%;
+  border-top-right-radius: 100px;
   margin-top: 114px;
 }
 
