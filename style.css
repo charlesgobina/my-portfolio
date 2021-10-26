@@ -359,3 +359,22 @@ img {
 .ski {
   margin-top: 24px;
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(./assets/images/header-shapes\ mobile@2x.svg) #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 15%;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+footer .footer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
