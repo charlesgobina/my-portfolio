@@ -47,6 +47,43 @@ nav {
   text-decoration: none;
 }
 
+@media screen and (min-width: 768px) {
+  #burger {
+    display: none;
+  }
+
+  #logo {
+    margin-left: 155px;
+  }
+
+  .nav-links {
+    list-style: none;
+    margin-right: 155px;
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav-links li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    color: #344563;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
 .me {
   display: flex;
   flex-direction: column;
@@ -58,10 +95,46 @@ nav {
   border-bottom-left-radius: 100px;
 }
 
+@media screen and (min-width: 768px) {
+  .me {
+    background-image: url(./assets/images/desk-head.svg);
+    height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 20% 80%;
+    border-bottom-left-radius: 100px;
+  }
+}
+
 .onme {
   margin-left: 24px;
   margin-right: 24px;
   margin-top: 114px;
+}
+
+@media screen and (min-width: 768px) {
+  .onme {
+    margin-left: 260px;
+    margin-right: 260px;
+    margin-top: 359px;
+    margin-bottom: 435px;
+  }
+
+  .lint .onme {
+    display: flex;
+  }
+
+  .hello-greeting {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .about-me {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+  }
 }
 
 .hello-greeting {
@@ -120,7 +193,7 @@ nav {
   grid-template-columns: 100%;
   margin-top: 114px;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   gap: 88px 0;
   height: 100%;
 }
@@ -134,6 +207,45 @@ nav {
   margin-left: 24px;
   margin-right: 24px;
   max-width: max-content;
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    margin-top: 142px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    background-color: #fff;
+    margin-left: 142px;
+    margin-right: 142px;
+  }
+
+  .cards:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .cards:nth-child(even) .project-info {
+    flex: 1;
+    margin-left: 46px;
+    margin-right: 0;
+  }
+
+  figure {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 24px;
+  }
+
+  img {
+    max-width: 100%;
+  }
 }
 
 figure {
@@ -184,8 +296,17 @@ img {
   color: #7a869a;
 }
 
-.langs li {
+.langs {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 12px;
+  list-style: none;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 36px;
+}
+
+.langs li {
   font-family: "Poppins", sans-serif;
   background: #ebebff;
   border-radius: 8px;
@@ -195,8 +316,9 @@ img {
   line-height: 16px;
   color: #6070ff;
   padding: 4px 12px;
-  margin-bottom: 36px;
   margin-right: 5px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
 }
 
 .work-info {
@@ -249,6 +371,31 @@ img {
   background-color: #fff;
   border-top-right-radius: 100px;
   margin-top: 114px;
+}
+
+@media screen and (min-width: 768px) {
+  .lint {
+    margin-top: 142px;
+  }
+
+  .lint .onme {
+    display: flex;
+    gap: 49px;
+    margin: 154px 142px 134px 142px;
+  }
+
+  .onme-top {
+    flex: 1;
+  }
+
+  .onme-bottom {
+    flex: 1;
+    align-self: flex-start;
+  }
+
+  .onme-bottom .la {
+    margin-top: 5px;
+  }
 }
 
 .about-socials {
@@ -374,6 +521,40 @@ img {
   padding-top: 103px;
   padding-bottom: 45px;
   font-family: "Poppins", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .footer footer {
+    margin: 142px 320px 127px 320px;
+  }
+
+  .footer .section-greeting {
+    width: 100%;
+  }
+
+  .footer .footer-form {
+    width: 100%;
+  }
+
+  .footer-form .tonic-btn {
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .footer .footer-form {
+    margin: 0 117px;
+    width: 50%;
+  }
+
+  .footer .section-greeting {
+    margin: 68px 116px 0 116px;
+    width: 50%;
+  }
+
+  .footer-form .tonic-btn {
+    align-self: center;
+  }
 }
 
 .footer h2 {
