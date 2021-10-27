@@ -64,7 +64,7 @@ nav {
   }
 
   .nav-links li {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
@@ -223,8 +223,7 @@ nav {
     border: 1px solid #dfe1e6;
     border-radius: 16px;
     background-color: #fff;
-    margin-left: 142px;
-    margin-right: 142px;
+    margin: 0 auto;
   }
 
   .cards:nth-child(even) {
