@@ -14,6 +14,7 @@ header {
   height: auto;
   background-color: #fff;
   position: fixed;
+  z-index: 1;
 }
 
 nav {
@@ -56,6 +57,7 @@ nav {
 @media screen and (min-width: 993px) {
   header {
     position: fixed;
+    z-index: 1;
   }
 
   #burger {
@@ -79,11 +81,46 @@ nav {
     font-weight: 500;
     line-height: 20px;
     text-align: center;
-    color: #344563;
+    color: #000;
   }
 
   .nav-links li a {
+    position: relative;
     text-decoration: none;
+    transition-duration: 0.25s;
+    letter-spacing: 0.07em;
+  }
+
+  .nav-links li a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    height: 3px;
+    width: 0;
+    background-color: #6070ff;
+    transition: 0.5s;
+  }
+
+  .nav-links li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    right: 50%;
+    height: 3px;
+    width: 0;
+    background-color: #6070ff;
+    transition: 0.5s;
+  }
+
+  .nav-links li a:hover::after {
+    width: 50%;
+  }
+
+  .nav-links li a:hover::before {
+    width: 50%;
   }
 }
 
@@ -134,6 +171,32 @@ nav {
   margin-top: 114px;
 }
 
+@media screen and (max-width: 375px) {
+  .onme .hello-greeting {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .onme .about-me {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    font-style: normal;
+  }
+
+  .onme .conn {
+    font-family: "Poppins", sans-serif;
+    color: #7f8cff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    margin-right: 24px;
+    margin-top: 12px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .onme {
     margin-left: 130px;
@@ -142,12 +205,12 @@ nav {
     margin-bottom: 130px;
   }
 
-  .hello-greeting {
+  .onme .hello-greeting {
     font-size: 48px;
     line-height: 60px;
   }
 
-  .about-me {
+  .onme .about-me {
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
@@ -162,9 +225,10 @@ nav {
     max-width: 1156px;
   }
 
-  .hello-greeting {
+  .me .onme .hello-greeting {
     font-size: 48px;
     line-height: 60px;
+    margin-top: 20vh;
   }
 
   .about-me {
@@ -236,6 +300,7 @@ nav {
 }
 
 .cards {
+  position: relative;
   flex-direction: column;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
@@ -389,6 +454,12 @@ nav {
     max-height: 100%;
   }
 
+  img:hover {
+    transform: scale(1.01, 1.02);
+    box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.7s cubic-bezier(0.83, 0, 0.17, 1);
+  }
+
   .project-info .tonic-one {
     font-family: "Poppins", sans-serif;
     font-size: 40px;
@@ -425,6 +496,11 @@ nav {
     line-height: 16px;
     letter-spacing: 0.03em;
     text-align: left;
+  }
+
+  .project-info .langs li:hover {
+    transform: translateY(3px);
+    transition: all 0.5s;
   }
 
   .project-info .tonic-para {
@@ -548,6 +624,7 @@ img {
 .tonic-btn:hover {
   background-color: #6070ff;
   box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
+  transition: all 0.7s;
   color: #fff;
 }
 
@@ -555,6 +632,7 @@ img {
   background-color: #2230d2;
   box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
   color: #fff;
+  transition: all 0.9s;
 }
 
 .lint {
@@ -840,13 +918,14 @@ footer .footer-form {
   gap: 20px;
 }
 
-.footer-form input,
+footer .footer-form input,
 textarea {
   width: 100%;
   padding: 15px;
-  border: 1px solid #cfd8dc;
+  border: 1px solid #6070ff;
   border-radius: 8px;
   font-family: inherit;
+  outline-color: #6070ff;
 }
 
 .footer-form .tonic-btn {
