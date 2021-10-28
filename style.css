@@ -16,9 +16,12 @@ header {
 }
 
 nav {
-  display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.d-flex {
+  display: flex;
 }
 
 #logo {
@@ -65,7 +68,6 @@ nav {
   .nav-links {
     list-style: none;
     margin-right: 155px;
-    display: flex;
     gap: 32px;
   }
 
@@ -91,9 +93,8 @@ nav {
 }
 
 .me {
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   background: url(./assets/images/header-shapes\ mobile@2x.svg) #fff;
   background-repeat: no-repeat;
@@ -227,14 +228,12 @@ nav {
   display: grid;
   grid-template-columns: 100%;
   margin-top: 114px;
-  justify-content: center;
   align-content: center;
   gap: 88px 0;
   height: 100%;
 }
 
 .cards {
-  display: flex;
   flex-direction: column;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
@@ -247,11 +246,9 @@ nav {
 @media screen and (min-width: 700px) {
   .projects {
     margin-top: 142px;
-    justify-content: center;
   }
 
   .cards {
-    display: flex;
     flex-direction: column;
     border: 1px solid #dfe1e6;
     border-radius: 16px;
@@ -339,7 +336,6 @@ nav {
   }
 
   .cards {
-    display: flex;
     flex-direction: row;
     gap: 46px;
     border: 1px solid #dfe1e6;
@@ -473,7 +469,6 @@ img {
 
 .tonic-list {
   list-style: none;
-  display: flex;
   align-items: center;
   justify-content: start;
 }
@@ -488,7 +483,6 @@ img {
 }
 
 .langs {
-  display: flex;
   flex-wrap: wrap;
   margin-top: 12px;
   list-style: none;
@@ -555,11 +549,15 @@ img {
   color: #fff;
 }
 
+.tonic-btn:focus {
+  background-color: #2230d2;
+  box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
 .lint {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   background-color: #fff;
   border-top-right-radius: 100px;
   margin-top: 114px;
@@ -595,7 +593,6 @@ img {
 
 .about-socials {
   margin-top: 12px;
-  display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
@@ -607,7 +604,6 @@ img {
 }
 
 .freak-lang {
-  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -627,8 +623,8 @@ img {
 }
 
 .web-stack {
-  display: flex;
   flex-direction: column;
+  gap: 12px;
   list-style: none;
 }
 
@@ -691,7 +687,6 @@ img {
 }
 
 .stack-lang {
-  display: flex;
   align-items: center;
   flex: 1;
   background-color: #f7f7f9;
@@ -731,6 +726,7 @@ img {
 
 .la {
   margin-top: 60px;
+  margin-bottom: 36px;
 }
 
 .fra {
@@ -818,17 +814,14 @@ img {
 }
 
 footer {
-  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-left: 24px;
   margin-right: 24px;
   gap: 80px;
 }
 
 footer .footer-form {
-  display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
