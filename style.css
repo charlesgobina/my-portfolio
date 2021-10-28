@@ -49,7 +49,7 @@ nav {
   text-decoration: none;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 993px) {
   header {
     position: fixed;
   }
@@ -84,7 +84,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .nav-links {
     display: none;
   }
@@ -101,7 +101,7 @@ nav {
   border-bottom-left-radius: 100px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .me {
     background-image: url(./assets/images/desk-head.svg);
     height: 100vh;
@@ -565,7 +565,7 @@ img {
   margin-top: 114px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .lint {
     margin-top: 142px;
   }
@@ -587,6 +587,7 @@ img {
 
   .onme-bottom .la {
     margin-top: 5px;
+    margin-bottom: 36px;
   }
 }
 
@@ -627,6 +628,40 @@ img {
   display: flex;
   flex-direction: column;
   list-style: none;
+}
+
+@media screen and (min-width: 992px) {
+  .web-stack {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .web-stack li {
+    max-width: 122px;
+    height: 120px;
+  }
+
+  .stack-icons {
+    margin-left: 0;
+    max-width: 48px;
+    max-height: 48px;
+    padding: 0;
+  }
+
+  .web-stack .stack-lang {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .freak-skills {
+    margin-top: 0;
+  }
+
+  .chevron-down {
+    height: 12px;
+    width: 24px;
+    margin-right: 66px;
+  }
 }
 
 .lach {
@@ -715,7 +750,7 @@ img {
   font-family: "Poppins", sans-serif;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .footer {
     background: url(./assets/images/footer-desk.svg) #6070ff;
     background-position: 100% 20%;
