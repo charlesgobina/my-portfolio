@@ -750,6 +750,16 @@ img {
   font-family: "Poppins", sans-serif;
 }
 
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+  transition: all 0.2s;
+}
+
+.footer-form input:hover::placeholder,
+.footer-form textarea:hover::placeholder {
+  transform: translateX(3px);
+}
+
 @media screen and (min-width: 992px) {
   .footer {
     background: url(./assets/images/footer-desk.svg) #6070ff;
