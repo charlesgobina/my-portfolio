@@ -33,16 +33,16 @@ nav {
   width: 76px;
   left: 12px;
   top: 10px;
-  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 20px;
   color: #6070ff;
   margin-left: 24px;
   text-decoration: none;
   white-space: nowrap;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
 #burger {
@@ -74,21 +74,18 @@ nav {
     gap: 32px;
   }
 
-  .nav-links li {
+  .nav-links li a {
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.25s;
+    letter-spacing: 0.07em;
     font-family: "Poppins", sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
     text-align: center;
-    color: #000;
-  }
-
-  .nav-links li a {
-    position: relative;
-    text-decoration: none;
-    transition-duration: 0.25s;
-    letter-spacing: 0.07em;
+    color: #344563;
   }
 
   .nav-links li a::before {
@@ -119,6 +116,11 @@ nav {
     width: 50%;
   }
 
+  .nav-links li a:hover {
+    color: #6070ff;
+    transition: all 0.7s;
+  }
+
   .nav-links li a:hover::before {
     width: 50%;
   }
@@ -136,9 +138,23 @@ nav {
   justify-content: center;
   background: url(./assets/images/header-shapes\ mobile@2x.svg) #fff;
   background-repeat: no-repeat;
-  background-size: cover;
   border-bottom-left-radius: 100px;
+  background-position: center;
+  background-size: 100%;
+  width: 100vw;
   height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .me {
+    background-image: url(./assets/images/desk-head.svg);
+    height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-bottom-left-radius: 100px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -147,20 +163,16 @@ nav {
     height: 100vh;
     width: auto;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 0%;
+    background-position: center;
     border-bottom-left-radius: 100px;
   }
 }
 
 @media screen and (min-width: 1070px) {
-  .me {
-    background-image: url(./assets/images/desk-head.svg);
+  main .me {
     height: 100vh;
     width: auto;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 0%;
     border-bottom-left-radius: 100px;
   }
 }
@@ -173,6 +185,12 @@ nav {
 
 @media screen and (max-width: 375px) {
   .onme .hello-greeting {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .me .onme .tagline {
+    color: #6070ff;
     font-size: 26px;
     line-height: 30px;
   }
@@ -210,6 +228,12 @@ nav {
     line-height: 60px;
   }
 
+  .onme .tagline {
+    color: #6070ff;
+    font-size: 48px;
+    line-height: 60px;
+  }
+
   .onme .about-me {
     font-size: 20px;
     font-weight: 400;
@@ -231,6 +255,12 @@ nav {
     margin-top: 20vh;
   }
 
+  .onme .tagline {
+    color: #6070ff;
+    font-size: 48px;
+    line-height: 60px;
+  }
+
   .about-me {
     font-size: 20px;
     font-weight: 400;
@@ -245,6 +275,30 @@ nav {
   font-style: normal;
   font-weight: 700;
   color: #172b4d;
+  line-height: 52px;
+  text-align: left;
+  left: 24px;
+  top: 114px;
+}
+
+.about-tagline {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  color: #6070ff;
+  line-height: 52px;
+  text-align: left;
+  left: 24px;
+  top: 114px;
+}
+
+.onme .tagline {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  color: #6070ff;
   line-height: 52px;
   text-align: left;
   left: 24px;
@@ -415,7 +469,7 @@ nav {
 
   .cards:hover {
     border-color: #a7aeff;
-    box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.288);
+    transition: all 0.9s;
   }
 
   .cards:nth-child(even) {
@@ -456,8 +510,7 @@ nav {
 
   img:hover {
     transform: scale(1.01, 1.02);
-    box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.7s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: all 0.9s cubic-bezier(0.33, 1, 0.68, 1);
   }
 
   .project-info .tonic-one {
@@ -729,6 +782,11 @@ img {
   .web-stack .stack-lang {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .stack-lang:hover {
+    transform: translateY(3px);
+    transition: all 0.5s;
   }
 
   .freak-skills {
