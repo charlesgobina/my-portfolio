@@ -1,9 +1,14 @@
 ## My Portfolio 
-This is part of my personal portfolio project. This project will test my understanding of flexbox, gitflow and making pull requests
+This is part of my personal portfolio project. This project will test my understanding of flexbox, the gitflow, CSS grid and making pull requests.
+![Portfolio Homepage](assets/images/portfolio.png)
 
 ## Built With
 * HTML
 * CSS
+* Figma
+
+## Live Demo
+[Demo](https://charlesgobina.github.io/my-portfolio/)
 
 ## Authors
 :student: Charles Gobina 
