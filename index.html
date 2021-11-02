@@ -22,7 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Portfolio</title>
+    <title>Charles's Portfolio</title>
   </head>
   
   <body>
@@ -53,8 +53,7 @@
     <main>
       <div class="me d-flex just-center">
         <section class="onme">
-          <h1 class="hello-greeting" id="intro" >I’m Charles</h1>
-          <h2 class="tagline">Glad to see you!</h2>
+          <h1 class="hello-greeting" id="intro" >I’m Charles <br /> <span class="tagline">Glad to see you!</span> </h1>
           <p class="about-me">
             I’m a software developer! I can help you build a product , feature
             or website Look through some of my work and experience! If you like
@@ -162,7 +161,7 @@
       <section class="projects" id="projects">
         <div class="cards d-flex">
           <figure>
-            <img src="./assets/images/project-one.png" alt="Tonica project" />
+            <img src="./assets/images/project-one.png" alt="Tonic project" />
           </figure>
           <div class="project-info">
             <h2 class="tonic-one">Tonic</h2>
@@ -209,7 +208,7 @@
         </div>
         <div class="cards d-flex">
           <figure>
-            <img src="./assets/images/project-two.png" alt="Tonica project" />
+            <img src="./assets/images/project-two.png" alt="Multi-Post Stories Project" />
           </figure>
           <div class="project-info">
             <h2 class="tonic-one">Multi-Post Stories</h2>
@@ -257,7 +256,7 @@
         </div>
         <div class="cards d-flex">
           <figure>
-            <img src="./assets/images/project-three.png" alt="Tonica project" />
+            <img src="./assets/images/project-three.png" alt="Facebook 360 Project" />
           </figure>
           <div class="project-info">
             <h2 class="tonic-one">Facebook 360</h2>
@@ -305,7 +304,7 @@
         </div>
         <div class="cards d-flex">
           <figure>
-            <img src="./assets/images/project-four.png" alt="Tonica project" />
+            <img src="./assets/images/project-four.png" alt="Uber Navigation Project" />
           </figure>
           <div class="project-info">
             <h2 class="tonic-one">Uber Navigation</h2>
@@ -468,7 +467,7 @@
                               <img
                                   src="./assets/images/html.png"
                                   class="stack-icons"
-                                  alt="Javascript icon"
+                                  alt="HTML icon"
                               />
                               <p class="stack-text">HTML</p>
                           </li>
@@ -476,7 +475,7 @@
                               <img
                                   src="./assets/images/css.png"
                                   class="stack-icons"
-                                  alt="Javascript icon"
+                                  alt="CSS icon"
                               />
                               <span class="stack-text">CSS</span>
                           </li>
@@ -507,10 +506,19 @@
                     </p>
                 </div>
                 <form class="footer-form d-flex" action="https://formspree.io/f/moqyzrwl" method="post">
-                    <input required type="text" maxlength="30" placeholder="Full Name" />
-                    <input required type="email" placeholder="Email Address" />
-                    <textarea required maxlength="500" placeholder="Write your message" cols="30" rows="7"></textarea>
-                    <button class="tonic-btn" type="submit">Get in Touch</button>
+                  <div class="form-label d-flex">
+                    <label for="firstname">Full Name</label>
+                    <input required type="text" maxlength="30" id="firstname" placeholder="Full Name" />
+                  </div>
+                  <div class="form-label d-flex">
+                    <label for="email">Email</label>
+                    <input required type="email" id="email" placeholder="Email Address" />
+                  </div>
+                  <div class="form-label d-flex">
+                    <label id="msg" for="message">Message</label>
+                    <textarea required maxlength="500" id="message" placeholder="Write your message" cols="30" rows="7"></textarea>
+                  </div>
+                  <button class="tonic-btn" type="submit">Get in Touch</button>
                 </form>
             </footer>
         </section>
