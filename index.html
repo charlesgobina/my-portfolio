@@ -22,7 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Portfolio</title>
+    <title>Charles's Portfolio</title>
   </head>
   
   <body>
@@ -468,7 +468,7 @@
                               <img
                                   src="./assets/images/html.png"
                                   class="stack-icons"
-                                  alt="Javascript icon"
+                                  alt="HTML icon"
                               />
                               <p class="stack-text">HTML</p>
                           </li>
@@ -476,7 +476,7 @@
                               <img
                                   src="./assets/images/css.png"
                                   class="stack-icons"
-                                  alt="Javascript icon"
+                                  alt="CSS icon"
                               />
                               <span class="stack-text">CSS</span>
                           </li>
@@ -507,10 +507,19 @@
                     </p>
                 </div>
                 <form class="footer-form d-flex" action="https://formspree.io/f/moqyzrwl" method="post">
-                    <input required type="text" maxlength="30" placeholder="Full Name" />
-                    <input required type="email" placeholder="Email Address" />
-                    <textarea required maxlength="500" placeholder="Write your message" cols="30" rows="7"></textarea>
-                    <button class="tonic-btn" type="submit">Get in Touch</button>
+                  <div class="form-label d-flex">
+                    <label for="firstname ">Full Name</label>
+                    <input required type="text" maxlength="30" id="firstname" placeholder="Full Name" />
+                  </div>
+                  <div class="form-label d-flex">
+                    <label for="email">Email</label>
+                    <input required type="email" id="email" placeholder="Email Address" />
+                  </div>
+                  <div class="form-label d-flex">
+                    <label id="msg" for="message">Message</label>
+                    <textarea required maxlength="500" id="message" placeholder="Write your message" cols="30" rows="7"></textarea>
+                  </div>
+                  <button class="tonic-btn" type="submit">Get in Touch</button>
                 </form>
             </footer>
         </section>
