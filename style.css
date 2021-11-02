@@ -908,6 +908,20 @@ img {
     margin: 0 auto;
   }
 
+  footer .footer-form .form-label {
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+  }
+
+  footer .footer-form .form-label label {
+    display: inline-block;
+    width: 100px;
+    white-space: nowrap;
+    align-items: flex-start;
+    text-align: right;
+  }
+
   .footer .section-greeting {
     width: 100%;
     text-align: right;
@@ -974,6 +988,14 @@ footer .footer-form {
   align-items: center;
   width: 100%;
   gap: 20px;
+}
+
+.footer-form .form-label {
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  width: 100%;
+  gap: 5px;
 }
 
 footer .footer-form input,
