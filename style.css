@@ -62,18 +62,18 @@ nav {
   .menu-container {
     width: 100%;
     height: 100vh;
-    background-color: #6070FF;
+    background-color: #6070ff;
     opacity: 70%;
     position: absolute;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
+    right: 0;
+    top: 0;
+    bottom: 0;
     mix-blend-mode: multiply;
     left: 100%;
     transition: 0.6s;
     z-index: 5;
   }
-  
+
   .menu-container.isActive {
     left: 0;
   }
@@ -82,7 +82,7 @@ nav {
     position: absolute;
     width: 100%;
   }
-  
+
   .menu-container i {
     position: relative;
     margin-left: 325px;
@@ -90,7 +90,7 @@ nav {
     margin-top: 62px;
     color: #fff;
   }
-  
+
   .menu-container li a {
     text-decoration: none;
     color: #fff;
@@ -98,7 +98,7 @@ nav {
     font-weight: 600;
     font-family: "Poppins", sans-serif;
   }
-  
+
   .menu-container ul {
     list-style: none;
     position: relative;
@@ -106,8 +106,6 @@ nav {
     left: 28px;
   }
 }
-
-
 
 @media screen and (min-width: 992px) {
   header {
@@ -132,6 +130,7 @@ nav {
     margin-right: 155px;
     gap: 32px;
   }
+
   .nav-links li a {
     position: relative;
     text-decoration: none;
@@ -156,6 +155,7 @@ nav {
     background-color: #6070ff;
     transition: 0.5s;
   }
+
   .nav-links li a::after {
     content: '';
     display: block;
@@ -167,13 +167,16 @@ nav {
     background-color: #6070ff;
     transition: 0.5s;
   }
+
   .nav-links li a:hover::after {
     width: 50%;
   }
+
   .nav-links li a:hover {
     color: #6070ff;
     transition: all 0.7s;
   }
+
   .nav-links li a:hover::before {
     width: 50%;
   }
@@ -241,17 +244,20 @@ nav {
     font-size: 26px;
     line-height: 30px;
   }
+
   .me .onme .tagline {
     color: #6070ff;
     font-size: 26px;
     line-height: 30px;
   }
+
   .onme .about-me {
     font-size: 15px;
     font-weight: 400;
     line-height: 20px;
     font-style: normal;
   }
+
   .onme .conn {
     font-family: "Poppins", sans-serif;
     color: #7f8cff;
@@ -272,15 +278,18 @@ nav {
     margin-top: 200px;
     margin-bottom: 130px;
   }
+
   .onme .hello-greeting {
     font-size: 48px;
     line-height: 60px;
   }
+
   .onme .tagline {
     color: #6070ff;
     font-size: 48px;
     line-height: 60px;
   }
+
   .onme .about-me {
     font-size: 20px;
     font-weight: 400;
@@ -295,16 +304,19 @@ nav {
     width: 80%;
     max-width: 1156px;
   }
+
   .me .onme .hello-greeting {
     font-size: 48px;
     line-height: 60px;
     margin-top: 20vh;
   }
+
   .onme .tagline {
     color: #6070ff;
     font-size: 48px;
     line-height: 60px;
   }
+
   .about-me {
     font-size: 20px;
     font-weight: 400;
@@ -412,6 +424,7 @@ nav {
   .projects {
     margin-top: 142px;
   }
+
   .cards {
     flex-direction: column;
     border: 1px solid #dfe1e6;
@@ -421,24 +434,29 @@ nav {
     margin-left: 142px;
     margin-right: 142px;
   }
+
   figure {
     margin-top: 24px;
     margin-bottom: 24px;
     margin-left: 24px;
     margin-right: 24px;
   }
+
   .cards:nth-child(even) img {
     width: 100%;
     padding: 0;
   }
+
   .cards:nth-child(odd) img {
     width: 100%;
     padding: 0;
   }
+
   .project-info {
     margin-left: 24px;
     margin-right: 24px;
   }
+
   .project-info .tonic-one {
     font-family: "Poppins", sans-serif;
     font-size: 40px;
@@ -447,6 +465,7 @@ nav {
     line-height: 52px;
     text-align: left;
   }
+
   .project-info .work-info .paw {
     font-family: "Poppins", sans-serif;
     font-size: 18px;
@@ -456,6 +475,7 @@ nav {
     text-align: left;
     text-transform: uppercase;
   }
+
   .project-info .work-info .wap {
     font-family: "Poppins", sans-serif;
     font-size: 18px;
@@ -464,6 +484,7 @@ nav {
     line-height: 24px;
     text-align: left;
   }
+
   .project-info .langs {
     font-family: "Poppins", sans-serif;
     font-size: 12px;
@@ -473,6 +494,7 @@ nav {
     letter-spacing: 0.03em;
     text-align: left;
   }
+
   .project-info .tonic-para {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
@@ -489,6 +511,7 @@ nav {
     justify-content: center;
     align-content: center;
   }
+
   .cards {
     flex-direction: row;
     gap: 46px;
@@ -499,29 +522,35 @@ nav {
     margin: 0 auto;
     max-width: 1156px;
   }
+
   .cards:hover {
     border-color: #a7aeff;
     transition: all 0.9s;
   }
+
   .cards:nth-child(even) {
     flex-direction: row-reverse;
   }
+
   .cards:nth-child(even) .project-info {
     flex: 1;
     margin-left: 46px;
     margin-right: 0;
   }
+
   .cards:nth-child(odd) .project-info {
     flex: 1;
     margin-left: 0;
     margin-right: 46px;
   }
+
   figure {
     margin-top: 24px;
     margin-bottom: 24px;
     margin-left: 24px;
     flex-shrink: 2;
   }
+
   .cards:nth-child(even) figure {
     margin-top: 24px;
     margin-bottom: 24px;
@@ -529,14 +558,17 @@ nav {
     margin-left: 0;
     padding-left: 0;
   }
+
   img {
     max-width: 100%;
     max-height: 100%;
   }
+
   img:hover {
     transform: scale(1.01, 1.02);
     transition: all 0.9s cubic-bezier(0.33, 1, 0.68, 1);
   }
+
   .project-info .tonic-one {
     font-family: "Poppins", sans-serif;
     font-size: 40px;
@@ -545,6 +577,7 @@ nav {
     line-height: 52px;
     text-align: left;
   }
+
   .project-info .work-info .paw {
     font-family: "Poppins", sans-serif;
     font-size: 18px;
@@ -554,6 +587,7 @@ nav {
     text-align: left;
     text-transform: uppercase;
   }
+
   .project-info .work-info .wap {
     font-family: "Poppins", sans-serif;
     font-size: 18px;
@@ -562,6 +596,7 @@ nav {
     line-height: 24px;
     text-align: left;
   }
+
   .project-info .langs {
     font-family: "Poppins", sans-serif;
     font-size: 12px;
@@ -571,10 +606,12 @@ nav {
     letter-spacing: 0.03em;
     text-align: left;
   }
+
   .project-info .langs li:hover {
     transform: translateY(3px);
     transition: all 0.5s;
   }
+
   .project-info .tonic-para {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
@@ -719,6 +756,7 @@ img {
   .lint {
     margin-top: 142px;
   }
+
   .lint .onme {
     display: flex;
     gap: 49px;
@@ -726,13 +764,16 @@ img {
     width: 80%;
     max-width: 1156px;
   }
+
   .onme-top {
     flex: 1;
   }
+
   .onme-bottom {
     flex: 1;
     align-self: flex-start;
   }
+
   .onme-bottom .la {
     margin-top: 5px;
     margin-bottom: 36px;
@@ -781,27 +822,33 @@ img {
     flex-direction: row;
     gap: 12px;
   }
+
   .web-stack li {
     max-width: 122px;
     height: 120px;
   }
+
   .stack-icons {
     margin-left: 0;
     max-width: 48px;
     max-height: 48px;
     padding: 0;
   }
+
   .web-stack .stack-lang {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .stack-lang:hover {
     transform: translateY(3px);
     transition: all 0.5s;
   }
+
   .freak-skills {
     margin-top: 0;
   }
+
   .chevron-down {
     height: 12px;
     width: 24px;
@@ -895,11 +942,13 @@ img {
   font-family: "Poppins", sans-serif;
 }
 
-.footer-form input::placeholder, .footer-form textarea::placeholder {
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
   transition: all 0.2s;
 }
 
-.footer-form input:hover::placeholder, .footer-form textarea:hover::placeholder {
+.footer-form input:hover::placeholder,
+.footer-form textarea:hover::placeholder {
   transform: translateX(3px);
 }
 
@@ -909,15 +958,18 @@ img {
     background-position: 100% 20%;
     background-repeat: no-repeat;
   }
+
   .footer footer {
     width: 50%;
     margin: 0 auto;
   }
+
   footer .footer-form .form-label {
     flex-direction: row;
     width: 100%;
     gap: 10px;
   }
+
   footer .footer-form .form-label label {
     display: inline-block;
     width: 100px;
@@ -925,13 +977,16 @@ img {
     align-items: flex-start;
     text-align: right;
   }
+
   .footer .section-greeting {
     width: 100%;
     text-align: right;
   }
+
   .footer .footer-form {
     width: 100%;
   }
+
   .footer-form .tonic-btn {
     margin: 0 auto;
   }
@@ -943,13 +998,16 @@ img {
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
+
   .footer .footer-form {
     margin: 0 117px;
     width: 60%;
   }
+
   .footer .section-greeting {
     width: 60%;
   }
+
   .footer-form .tonic-btn {
     margin: 0 auto;
   }
@@ -996,7 +1054,8 @@ footer .footer-form {
   gap: 5px;
 }
 
-footer .footer-form input, textarea {
+footer .footer-form input,
+textarea {
   width: 100%;
   padding: 15px;
   border: 1px solid #6070ff;
