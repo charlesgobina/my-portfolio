@@ -17,6 +17,10 @@ header {
   z-index: 1;
 }
 
+main {
+  z-index: 2;
+}
+
 nav {
   align-items: center;
   justify-content: space-between;
@@ -54,7 +58,56 @@ nav {
   text-decoration: none;
 }
 
-@media screen and (min-width: 993px) {
+@media screen and (max-width: 992px) {
+  .menu-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #6070ff;
+    opacity: 70%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+    left: 100%;
+    transition: 0.6s;
+    z-index: 5;
+  }
+
+  .menu-container.isActive {
+    left: 0;
+  }
+
+  .menu-container .close-btn {
+    position: absolute;
+    width: 100%;
+  }
+
+  .menu-container i {
+    position: relative;
+    margin-left: 325px;
+    margin-right: 38px;
+    margin-top: 62px;
+    color: #fff;
+  }
+
+  .menu-container li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .menu-container ul {
+    list-style: none;
+    position: relative;
+    top: 106px;
+    left: 28px;
+  }
+}
+
+@media screen and (min-width: 992px) {
   header {
     position: fixed;
     z-index: 1;
@@ -66,6 +119,10 @@ nav {
 
   #logo {
     margin-left: 155px;
+  }
+
+  .menu-container {
+    display: none;
   }
 
   .nav-links {
@@ -85,7 +142,6 @@ nav {
     font-weight: 500;
     line-height: 20px;
     text-align: center;
-    color: #344563;
   }
 
   .nav-links li a::before {
