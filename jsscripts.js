@@ -84,6 +84,73 @@ const projects = [
     gitHub:''
   }
 ]
+const projectSection = document.getElementById('projects'); 
+
+function createCards(){
+  let cardWrapper = document.createElement('div');
+  let card = '';
+  for(let i = 0; i < projects.length; i++) {
+     card += `
+    <div class="cards d-flex">
+      <figure>
+        <img src=${projects[i].image} alt="Tonic project" />
+      </figure>
+      <div class="project-info">
+        <h2 class="tonic-one">${projects[i].projectName}</h2>
+        <ul class="tonic-list work-info d-flex">
+          <li class="paw">${projects[i].links[0]}</li>
+          <li>
+            <svg
+              class="linky"
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="4" cy="4" r="4" fill="#C1C7D0" />
+            </svg>
+          </li>
+          <li class="wap">${projects[i].links[1]}</li>
+          <li>
+            <svg
+              class="linky"
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="4" cy="4" r="4" fill="#C1C7D0" />
+            </svg>
+          </li>
+          <li class="wap">${projects[i].links[2]}</li>
+        </ul>
+        <p class="tonic-para">
+        ${projects[i].description}
+        </p>
+        <ul class="tonic-list langs d-flex">
+          ${projects[i].tech.map(item=>{
+          const techsList=`<li>${item}</li>`
+          return techsList
+          }).join('')}
+        </ul>
+        <button type="button" class="tonic-btn"  data-target="tonic">See Project</button>
+      </div>
+    </div>
+    `
+    cardWrapper.innerHTML = card;
+    projectSection.appendChild(cardWrapper);
+    const cardsButton = document.querySelectorAll('.cards button');
+    cardsButton.forEach((button) => {
+    button.addEventListener('click', () => {
+      createModal(projects[i]);
+    })
+    })
+  }
+}
+
+window.onload = createCards()
 
 
 
@@ -96,12 +163,11 @@ const projects = [
 
 
 
-function createModal() {
-  const projectSection = document.getElementById('projects'); 
+function createModal(project) {
   const modalContainer = document.createElement('div');
   const modalContent = `
   <div> <i class="bx bx-x bx-sm" id="modal-btn"></i>
-  <h2 class="tonic-one">Tonic</h2>
+  <h2 class="tonic-one">${project.projectName}</h2>
   <ul class="tonic-list work-info d-flex">
     <li class="paw">CANOPY</li>
     <li>
@@ -142,12 +208,7 @@ function createModal() {
   })
 }
 
-const cardsButton = document.querySelectorAll('.cards button');
-cardsButton.forEach((button) => {
-  button.addEventListener('click', () => {
-    createModal();
-  })
-})
+
 
 
 
