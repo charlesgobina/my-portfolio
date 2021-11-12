@@ -137,9 +137,9 @@ const theCard = (project) => {
         </p>
         <div class="modal-side d-flex">
           <ul class="tonic-list modal-langs d-flex">
-${project.tech.map(item => {
-    const techsList=`<li>${item}</li>`;
-    return techsList;
+${project.tech.map((item) => {
+      const techsList = `<li>${item}</li>`;
+      return techsList;
 }).join('')};
           </ul>
           <hr class="modal-rule">
@@ -150,18 +150,16 @@ ${project.tech.map(item => {
         </div>
       </div>
   </div>`;
-  
-modal.innerHTML = cards;
-const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', () => {
-  document.body.style.overflow = 'auto'
-  modal.classList.remove('active');
-  modalOverlay.classList.remove('active');
-});
-};
-
 const modal = document.querySelector('.modal-content');
 const modalOverlay = document.querySelector('#overlay');
+modal.innerHTML = cards;
+  const closeButton = document.querySelector('.close');
+  closeButton.addEventListener('click', () => {
+    document.body.style.overflow = 'auto';
+    modal.classList.remove('active');
+    modalOverlay.classList.remove('active');
+  });
+  };
 const btns = document.querySelectorAll('[data-target]');
 for (let i = 0; i < projects.length; i += 1) {
   btns.forEach((btn) => {
