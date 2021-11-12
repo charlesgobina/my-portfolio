@@ -88,7 +88,8 @@ const projects = [
     gitHub: '',
   },
 ];
-
+const modal = document.querySelector('.modal-content');
+const modalOverlay = document.querySelector('#overlay');
 const theCard = (project) => {
   const cards = `
   <div class="cards d-flex">
@@ -138,9 +139,9 @@ const theCard = (project) => {
         <div class="modal-side d-flex">
           <ul class="tonic-list modal-langs d-flex">
 ${project.tech.map((item) => {
-      const techsList = `<li>${item}</li>`;
-      return techsList;
-}).join('')};
+  const techsList = `<li>${item}</li>`;
+  return techsList;
+  }).join('')};
           </ul>
           <hr class="modal-rule">
           <div class="button-group d-flex">
@@ -150,16 +151,14 @@ ${project.tech.map((item) => {
         </div>
       </div>
   </div>`;
-const modal = document.querySelector('.modal-content');
-const modalOverlay = document.querySelector('#overlay');
-modal.innerHTML = cards;
+  modal.innerHTML = cards;
   const closeButton = document.querySelector('.close');
   closeButton.addEventListener('click', () => {
     document.body.style.overflow = 'auto';
     modal.classList.remove('active');
     modalOverlay.classList.remove('active');
   });
-  };
+};
 const btns = document.querySelectorAll('[data-target]');
 for (let i = 0; i < projects.length; i += 1) {
   btns.forEach((btn) => {
