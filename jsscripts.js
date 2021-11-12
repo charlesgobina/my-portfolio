@@ -86,9 +86,8 @@ const projects = [
     tech: ['html', 'css', 'javascript', 'ruby on rails'],
     liveDemo: '',
     gitHub: '',
-  }
+  },
 ];
-
 
 const theCard = (project) => {
   const cards = `
@@ -138,10 +137,10 @@ const theCard = (project) => {
         </p>
         <div class="modal-side d-flex">
           <ul class="tonic-list modal-langs d-flex">
-            ${project.tech.map(item=>{
-            const techsList=`<li>${item}</li>`
-            return techsList
-            }).join('')}
+${project.tech.map(item => {
+    const techsList=`<li>${item}</li>`;
+    return techsList;
+}).join('')};
           </ul>
           <hr class="modal-rule">
           <div class="button-group d-flex">
@@ -152,29 +151,27 @@ const theCard = (project) => {
       </div>
   </div>`;
   
-  modal.innerHTML = cards
-  const closeButton = document.querySelector('.close');
-  closeButton.addEventListener('click', () => {
-    document.body.style.overflow = 'auto'
-    modal.classList.remove('active');
-    modalOverlay.classList.remove('active');
-  });
-}
+modal.innerHTML = cards;
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', () => {
+  document.body.style.overflow = 'auto'
+  modal.classList.remove('active');
+  modalOverlay.classList.remove('active');
+});
+};
 
 const modal = document.querySelector('.modal-content');
 const modalOverlay = document.querySelector('#overlay');
 const btns = document.querySelectorAll('[data-target]');
-for (let i = 0; i < projects.length; i+=1) {
+for (let i = 0; i < projects.length; i += 1) {
   btns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      if(projects[i].id === btn.dataset.target){
+      if (projects[i].id === btn.dataset.target) {
         modalOverlay.classList.toggle('active');
         document.body.style.overflow = 'hidden';
         modal.classList.toggle('active');
         theCard(projects[i]);
       }
-    })
-  })
+    });
+  });
 }
-
-

@@ -111,7 +111,7 @@ nav {
     position: fixed;
     top: 50%;
     left: 50%;
-    width:50%;
+    width: 50%;
     transform: translate(-50%, -50%) scale(0);
     z-index: 2;
   }
@@ -122,15 +122,19 @@ nav {
 
   .modal-bottom {
     flex-direction: row;
+    justify-content: space-between;
   }
 
-  .m-close-head{
+  .m-close-head {
     justify-content: space-between;
     align-items: baseline;
   }
 
-  .m-close-head, .modal-tonic, .modal-bottom, .modal-figure {
-    margin-left: 50px ;
+  .m-close-head,
+  .modal-tonic,
+  .modal-bottom,
+  .modal-figure {
+    margin-left: 50px;
     margin-right: 50px;
   }
 
@@ -145,10 +149,6 @@ nav {
     margin-left: 5%;
   }
 
-  .modal-bottom {
-    justify-content: space-between;
-  }
-
   .button-group {
     margin-top: 5px;
     flex-direction: column;
@@ -156,30 +156,28 @@ nav {
   }
 
   .modal-rule {
-    margin:0 2%;
+    margin: 0 2%;
     color: #f7f7f9;
-    border: 1px solid #EBECF0
+    border: 1px solid #ebecf0;
   }
-
 }
 
 @media screen and (max-width: 991px) {
   .modal-side {
     flex-direction: column;
   }
-  
+
   .modal-bottom {
     flex-direction: column;
   }
 
-  .m-close-head{
+  .m-close-head {
     justify-content: space-between;
     align-items: baseline;
   }
-  
 }
 
- .modal-content {
+.modal-content {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -187,7 +185,7 @@ nav {
   z-index: 2;
 }
 
-#overlay.active  {
+#overlay.active {
   display: block;
   position: fixed;
   top: 0;
@@ -198,7 +196,7 @@ nav {
   z-index: 1;
 }
 
- .modal-content.active  {
+.modal-content.active {
   transition: all 300ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
 }
@@ -226,7 +224,7 @@ nav {
 
 .button-group {
   margin-bottom: 35px;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
 .button-group a {
@@ -260,9 +258,9 @@ nav {
 }
 
 .modal-rule {
-  margin-bottom:10px;
+  margin-bottom: 10px;
   color: #f7f7f9;
-  border: 1px solid #EBECF0
+  border: 1px solid #ebecf0;
 }
 
 @media screen and (min-width: 992px) {
