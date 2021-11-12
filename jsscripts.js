@@ -139,8 +139,8 @@ const theCard = (project) => {
         <div class="modal-side d-flex">
           <ul class="tonic-list modal-langs d-flex">
 ${project.tech.map((item) => {
-  const techsList = `<li>${item}</li>`;
-  return techsList;
+    const techsList = `<li>${item}</li>`;
+    return techsList;
   }).join('')};
           </ul>
           <hr class="modal-rule">
