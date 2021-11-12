@@ -129,7 +129,7 @@ const theCard = (project) => {
       </ul>
       <div class="bck">
         <figure class="modal-figure">
-          <img src=${project.image} alt="Tonic project" />
+          <img src=${project.image} id="modal-img" alt="Tonic project" />
         </figure>
       </div>
       <div class="modal-bottom d-flex">
@@ -141,7 +141,7 @@ const theCard = (project) => {
 ${project.tech.map((item) => {
     const techsList = `<li>${item}</li>`;
     return techsList;
-  }).join('')};
+  }).join('')}
           </ul>
           <hr class="modal-rule">
           <div class="button-group d-flex">

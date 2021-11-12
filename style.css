@@ -109,10 +109,11 @@ nav {
 @media screen and (min-width: 992px) {
   .modal-content {
     position: fixed;
-    top: 50%;
+    margin: -250px 0;
     left: 50%;
-    width: 50%;
-    transform: translate(-50%, -50%) scale(0);
+    width: 90%;
+    height: 25%;
+    transform: translate(-50%, 50%) scale(0);
     z-index: 2;
   }
 
@@ -153,12 +154,19 @@ nav {
     margin-top: 5px;
     flex-direction: column;
     gap: 5px;
+    width: 70%;
   }
 
   .modal-rule {
     margin: 0 2%;
     color: #f7f7f9;
     border: 1px solid #ebecf0;
+  }
+
+  .modal-figure #modal-img {
+    margin: 0 auto;
+    width: 700px;
+    height: 420px;
   }
 }
 
@@ -194,6 +202,7 @@ nav {
   height: 100vh;
   background-color: rgba(0, 0, 0, 70%);
   z-index: 1;
+  padding: 50% 0;
 }
 
 .modal-content.active {
@@ -230,6 +239,7 @@ nav {
 .button-group a {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5px;
 }
 
