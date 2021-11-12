@@ -97,6 +97,7 @@ for(let i = 0; i < projects.length; i++){
     btn.addEventListener('click', () => {
       if(projects[i].id === btn.dataset.target){
         modalOverlay.classList.toggle('active');
+        document.body.style.overflow = 'hidden';
         modal.classList.toggle('active');
         theCard(projects[i])
       }
@@ -105,7 +106,7 @@ for(let i = 0; i < projects.length; i++){
 }
 
 
-theCard = (project) => {
+const theCard = (project) => {
     const cards = `
     <div class="cards d-flex">
       <div class="project-info">
@@ -113,7 +114,7 @@ theCard = (project) => {
           <h2 class="tonic-one">${project.projectName}</h2>
           <span class="close"><i class='bx bx-x bx-md'></i></span>
         </div>
-        <ul class="tonic-list work-info d-flex">
+        <ul class="modal-tonic tonic-list work-info d-flex">
           <li class="paw">${project.links[0]}</li>
           <li>
             <svg
@@ -142,23 +143,26 @@ theCard = (project) => {
           </li>
           <li class="wap">${project.links[2]}</li>
         </ul>
-        <figure class="modal-figure">
-          <img src=${project.image} alt="Tonic project" />
-        </figure>
+        <div class="bck">
+          <figure class="modal-figure">
+            <img src=${project.image} alt="Tonic project" />
+          </figure>
+        </div>
         <div class="modal-bottom d-flex">
           <p class="tonic-para">
           ${project.description}
           </p>
           <div class="modal-side d-flex">
-            <ul class="tonic-list langs d-flex">
+            <ul class="tonic-list modal-langs d-flex">
               ${project.tech.map(item=>{
               const techsList=`<li>${item}</li>`
               return techsList
               }).join('')}
             </ul>
-            <div class="button-group">
-              <a class="modal-btn" href="#">See project <i class='bx bxl-github bx-sm'></i></a>
-              <a class="modal-btn" href="#">See source <i class='bx bxl-github bx-sm'></i></a>
+            <hr class="modal-rule">
+            <div class="button-group d-flex">
+              <a class="modal-btn" href=${project.liveDemo}><span>See project</span> <i class='bx bx-globe bx-sm' id='icon'></i></a>
+              <a class="modal-btn" href=${project.gitHub}><span>See source</span> <i class='bx bxl-github bx-sm'></i></a>
             </div>
           </div>
         </div>
@@ -167,6 +171,7 @@ theCard = (project) => {
     modal.innerHTML = cards
     const closeButton = document.querySelector('.close');
     closeButton.addEventListener('click', () => {
+      document.body.style.overflow = 'auto'
       modal.classList.remove('active');
       modalOverlay.classList.remove('active');
     })
