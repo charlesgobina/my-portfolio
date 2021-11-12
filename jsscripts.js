@@ -45,6 +45,7 @@ navs.forEach((navItem) => {
 const projects = [
   {
     id:'tonic',
+    dataTarget:'tonic',
     projectName: 'Tonic',
     image: './assets/images/project-one.png',
     links: ['Canopy', 'Back end dev', '2015'],
@@ -55,6 +56,7 @@ const projects = [
   },
   {
     id:'multi',
+    dataTarget:'multi',
     projectName: 'Multi-Post Stories',
     image: './assets/images/project-two.png',
     links: ['Facebook', 'Full Stack dev', '2015'],
@@ -65,6 +67,7 @@ const projects = [
   },
   {
     id:'facebook',
+    dataTarget:'facebook',
     projectName: 'Facebook 360',
     image: './assets/images/project-three.png',
     links: ['Facebook', 'Full Stack dev', '2015'],
@@ -75,6 +78,7 @@ const projects = [
   },
   {
     id:'uber',
+    dataTarget:'uber',
     projectName: 'Uber Navigation',
     image: './assets/images/project-four.png',
     links: ['Facebook', 'Full Stack dev', '2015'],
@@ -135,16 +139,18 @@ function createCards(){
           return techsList
           }).join('')}
         </ul>
-        <button type="button" class="tonic-btn"  data-target="tonic">See Project</button>
+        <button type="button" class="tonic-btn"  data-target=${projects[i].dataTarget}>See Project</button>
       </div>
     </div>
     `
     cardWrapper.innerHTML = card;
     projectSection.appendChild(cardWrapper);
     const cardsButton = document.querySelectorAll('.cards button');
-    cardsButton.forEach((button) => {
-    button.addEventListener('click', () => {
-      createModal(projects[i]);
+    cardsButton.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.target === projects[i].id) {
+        createModal(projects[i]);
+      }
     })
     })
   }
@@ -165,38 +171,43 @@ window.onload = createCards()
 
 function createModal(project) {
   const modalContainer = document.createElement('div');
+  modalContainer.id = 'modal'
   const modalContent = `
-  <div> <i class="bx bx-x bx-sm" id="modal-btn"></i>
-  <h2 class="tonic-one">${project.projectName}</h2>
-  <ul class="tonic-list work-info d-flex">
-    <li class="paw">CANOPY</li>
-    <li>
-      <svg
-        class="linky"
-        width="8"
-        height="8"
-        viewBox="0 0 8 8"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="4" cy="4" r="4" fill="#C1C7D0" />
-      </svg>
-    </li>
-    <li class="wap">Back End Dev</li>
-    <li>
-      <svg
-        class="linky"
-        width="8"
-        height="8"
-        viewBox="0 0 8 8"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="4" cy="4" r="4" fill="#C1C7D0" />
-      </svg>
-    </li>
-    <li class="wap">2015</li>
-  </ul>
+  <div class="mod-content">
+    <i class="bx bx-x bx-sm" id="modal-btn"></i>
+    <h2 class="tonic-one">${project.projectName}</h2>
+    <ul class="tonic-list work-info d-flex">
+      <li class="paw">CANOPY</li>
+      <li>
+        <svg
+          class="linky"
+          width="8"
+          height="8"
+          viewBox="0 0 8 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="4" cy="4" r="4" fill="#C1C7D0" />
+        </svg>
+      </li>
+      <li class="wap">Back End Dev</li>
+      <li>
+        <svg
+          class="linky"
+          width="8"
+          height="8"
+          viewBox="0 0 8 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="4" cy="4" r="4" fill="#C1C7D0" />
+        </svg>
+      </li>
+      <li class="wap">2015</li>
+    </ul>
+    <figure class="modal-image">
+      <img src=${project.image} alt="Facebook 360 Project"/>
+    </figure>
   </div>
   `;
 
