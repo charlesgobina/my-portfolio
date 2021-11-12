@@ -85,8 +85,7 @@ nav {
 
   .menu-container i {
     position: relative;
-    margin-left: 325px;
-    margin-right: 38px;
+    margin-left: 282px;
     margin-top: 62px;
     color: #fff;
   }
@@ -105,6 +104,94 @@ nav {
     top: 106px;
     left: 28px;
   }
+}
+
+@media screen and (min-width: 992px) {
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:80%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 2;
+  }
+
+  .modal-side {
+    flex-direction: column;
+  }
+
+  .modal-bottom {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .modal-side {
+    flex-direction: column;
+  }
+  
+  .modal-bottom {
+    flex-direction: column;
+  }
+
+  .m-close-head{
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
+
+
+ .modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 2;
+}
+
+ #overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#overlay.active  {
+  display: block;
+}
+
+ .modal-content.active  {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-figure {
+  width: fit-content;
+  height: auto;
+}
+
+.modal-btn {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: 1px solid #6070ff;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #396df2;
+}
+
+.button-group {
+  height: 100px;
 }
 
 @media screen and (min-width: 992px) {
