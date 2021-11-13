@@ -569,6 +569,7 @@
                 maxlength="30"
                 id="firstname"
                 placeholder="Full Name"
+                name="user"
               />
             </div>
             <div class="form-label d-flex">
@@ -578,6 +579,7 @@
                 type="email"
                 id="email"
                 placeholder="Email Address"
+                name="email"
               />
             </div>
             <div class="form-label d-flex">
@@ -589,9 +591,11 @@
                 placeholder="Write your message"
                 cols="30"
                 rows="7"
+                name="message"
               ></textarea>
             </div>
-            <button class="tonic-btn" type="submit">Get in Touch</button>
+            <small class="err-msg"></small>
+            <button class="tonic-btn" id="submit" type="submit">Get in Touch</button>
           </form>
         </footer>
       </section>
