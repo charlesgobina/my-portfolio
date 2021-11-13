@@ -106,6 +106,13 @@ nav {
   }
 }
 
+.err-msg {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
 @media screen and (min-width: 992px) {
   .modal-content {
     position: fixed;
