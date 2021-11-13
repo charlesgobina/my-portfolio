@@ -192,3 +192,50 @@ const emailChecker = () => {
 window.onload = () => {
   (emailChecker());
 };
+
+const inputName = document.getElementById('firstname');
+const inputEmail = document.getElementById('email');
+const textArea = document.getElementById('message');
+
+const storageAvailable = (type) => {
+  let storage;
+  try {
+    storage = window[type];
+    const x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException
+      && (e.code === 22
+        || e.code === 1014
+        || e.name === 'QuotaExceededError'
+        || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+      && storage
+      && storage.length !== 0
+    );
+  }
+};
+
+if (storageAvailable('localStorage') && localStorage.getItem('userData')) {
+  const userData = JSON.parse(localStorage.getItem('userData'));
+  inputName.value = userData.name;
+  inputEmail.value = userData.email;
+  textArea.value = userData.msg;
+}
+
+const populateStorage = () => {
+  if (storageAvailable('localStorage')) {
+    const userData = {
+      email: inputEmail.value,
+      name: inputName.value,
+      msg: textArea.value,
+    };
+    const userDataStr = JSON.stringify(userData);
+    localStorage.setItem('userData', userDataStr);
+  }
+};
+inputName.onchange = populateStorage;
+inputEmail.onchange = populateStorage;
+textArea.onchange = populateStorage;
