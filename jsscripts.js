@@ -186,11 +186,9 @@ const emailChecker = () => {
       errorMsg.textContent = 'Please email should be in lowercase';
       errorMsg.style.color = 'red';
     }
-  })
+  });
 }
 
 window.onload = () => {
   (emailChecker());
 }
-
-
