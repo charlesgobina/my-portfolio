@@ -187,8 +187,8 @@ const emailChecker = () => {
       errorMsg.style.color = 'red';
     }
   });
-}
+};
 
 window.onload = () => {
   (emailChecker());
-}
+};
