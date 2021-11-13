@@ -182,6 +182,7 @@ const emailChecker = () => {
       event.submit();
     } else {
       event.preventDefault();
+      errorMsg.classList.toggle('active');
       errorMsg.textContent = 'Please email should be in lowercase';
       errorMsg.style.color = 'red';
     }
