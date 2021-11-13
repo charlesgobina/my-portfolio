@@ -172,3 +172,24 @@ for (let i = 0; i < projects.length; i += 1) {
     });
   });
 }
+
+const emailChecker = () => {
+  const email = document.querySelector('#email');
+  const errorMsg = document.querySelector('.err-msg');
+  const submitBtn = document.querySelector('#submit');
+  submitBtn.addEventListener('click', (event) => {
+    if (email.value === email.value.toLowerCase()) {
+      event.submit();
+    } else {
+      event.preventDefault();
+      errorMsg.textContent = 'Please email should be in lowercase';
+      errorMsg.style.color = 'red';
+    }
+  })
+}
+
+window.onload = () => {
+  (emailChecker());
+}
+
+
