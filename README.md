@@ -8,7 +8,7 @@ This is part of my personal portfolio project. This project will test my underst
 * Figma
 
 ## Live Demo
-* [Demo](https://charlesgobina.github.io/my-portfolio/)
+* [Demo](https://charlesgobina-todo.netlify.app/)
 
 ## Authors
 :student: Charles Gobina 
