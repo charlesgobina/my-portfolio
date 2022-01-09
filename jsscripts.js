@@ -92,8 +92,8 @@ const modal = document.querySelector('.modal-content');
 const modalOverlay = document.querySelector('#overlay');
 const theCard = (project) => {
   const cards = `
-  <div class="cards d-flex">
-    <div class="project-info">
+  <div class="cards modal-card">
+    <div class="project-data">
       <div class="m-close-head d-flex">
         <h2 class="tonic-one">${project.projectName}</h2>
         <span class="close"><i class='bx bx-x bx-md'></i></span>
@@ -127,29 +127,28 @@ const theCard = (project) => {
         </li>
         <li class="wap">${project.links[2]}</li>
       </ul>
-      <div class="bck">
-        <figure class="modal-figure">
-          <img src=${project.image} id="modal-img" alt="Tonic project" />
-        </figure>
-      </div>
-      <div class="modal-bottom d-flex">
-        <p class="tonic-para">
-        ${project.description}
-        </p>
-        <div class="modal-side d-flex">
-          <ul class="tonic-list modal-langs d-flex">
-${project.tech.map((item) => {
-    const techsList = `<li>${item}</li>`;
-    return techsList;
-  }).join('')}
-          </ul>
-          <hr class="modal-rule">
-          <div class="button-group d-flex">
-            <a class="modal-btn" href=${project.liveDemo}><span>See project</span> <i class='bx bx-globe bx-sm' id='icon'></i></a>
-            <a class="modal-btn" href=${project.gitHub}><span>See source</span> <i class='bx bxl-github bx-sm'></i></a>
-          </div>
+      <figure class="modal-figure">
+        <img src=${project.image} id="modal-img" alt="Tonic project" />
+      </figure>
+    </div>
+    <div class="modal-bottom d-flex">
+      <p class="tonic-para">
+      ${project.description}
+      </p>
+      <div class="modal-side d-flex">
+        <ul class="tonic-list modal-langs d-flex">
+          ${project.tech.map((item) => {
+              const techsList = `<li>${item}</li>`;
+              return techsList;
+            }).join('')}
+        </ul>
+        <hr class="modal-rule">
+        <div class="button-group d-flex">
+          <a class="modal-btn" href=${project.liveDemo}><span>Live demo</span> <i class='bx bx-wifi bx-sm' id='icon'></i></a>
+          <a class="modal-btn" href=${project.gitHub}><span>See source</span> <i class='bx bxl-github bx-sm'></i></a>
         </div>
       </div>
+    </div>
   </div>`;
   modal.innerHTML = cards;
   const closeButton = document.querySelector('.close');

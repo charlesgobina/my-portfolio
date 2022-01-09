@@ -123,13 +123,15 @@ nav {
 }
 
 @media screen and (min-width: 992px) {
+  .modal {
+    position: relative;
+    padding: 200px auto 400px auto;
+  }
+
   .modal-content {
     position: fixed;
-    margin: -250px 0;
     left: 50%;
-    width: 90%;
-    height: 25%;
-    transform: translate(-50%, 50%) scale(0);
+    top: 70px;
     z-index: 2;
   }
 
@@ -138,7 +140,7 @@ nav {
   }
 
   .modal-bottom {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
   }
 
@@ -147,23 +149,11 @@ nav {
     align-items: baseline;
   }
 
-  .m-close-head,
-  .modal-tonic,
-  .modal-bottom,
   .modal-figure {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-  .modal-figure {
-    margin: 0 auto;
+    margin: 50px auto;
     background: rgb(236, 236, 236);
-  }
-
-  .bck {
-    max-width: 100%;
-    background: rgb(243, 242, 242);
-    margin-left: 5%;
+    padding: none;
+    width: 100%;
   }
 
   .button-group {
@@ -181,8 +171,20 @@ nav {
 
   .modal-figure #modal-img {
     margin: 0 auto;
-    width: 700px;
-    height: 420px;
+    width: 100%;
+  }
+
+  .modal-langs {
+    flex-direction: row;
+  }
+
+  .modal-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    width: 60em;
+    background-color: #fff;
   }
 }
 
@@ -234,14 +236,14 @@ nav {
 .modal-btn {
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.03em;
   border: 1px solid #6070ff;
   border-radius: 8px;
-  padding: 5px;
+  padding: 10px;
   background-color: #fff;
   text-decoration: none;
   color: #396df2;
@@ -249,7 +251,7 @@ nav {
 
 .button-group {
   margin-bottom: 35px;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .button-group a {
@@ -810,8 +812,6 @@ figure {
 
 img {
   width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
   text-align: center;
 }
 
