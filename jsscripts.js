@@ -88,11 +88,12 @@ const projects = [
     gitHub: '',
   },
 ];
+
 const modal = document.querySelector('.modal-content');
 const modalOverlay = document.querySelector('#overlay');
 const theCard = (project) => {
   const cards = `
-  <div class="cards modal-card">
+  <div class="modal-card">
     <div class="project-data">
       <div class="m-close-head d-flex">
         <h2 class="tonic-one">${project.projectName}</h2>
@@ -132,7 +133,7 @@ const theCard = (project) => {
       </figure>
     </div>
     <div class="modal-bottom d-flex">
-      <p class="tonic-para">
+      <p class="tonic-para modal-para">
       ${project.description}
       </p>
       <div class="modal-side d-flex">
