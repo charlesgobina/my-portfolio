@@ -185,10 +185,6 @@
         </section>
       </div>
       <section class="projects" id="projects">
-        <div class="modal">
-          <div id="overlay"></div>
-          <div class="modal-content"></div>
-        </div>
         <div class="cards d-flex">
           <figure>
             <img src="./assets/images/todo.png" alt="Tonic project" />
@@ -599,6 +595,68 @@
         </footer>
       </section>
     </main>
+
+    <div class="modal-card">
+      <div class="project-data">
+        <div class="m-close-head d-flex">
+          <h2 class="tonic-one">Title</h2>
+          <span class="close"><i class='bx bx-x bx-md'></i></span>
+        </div>
+        <ul class="modal-tonic tonic-list work-info d-flex">
+          <li class="paw">Microverse</li>
+          <li>
+            <svg
+              class="linky"
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="4" cy="4" r="4" fill="#C1C7D0" />
+            </svg>
+          </li>
+          <li class="wap">Backend</li>
+          <li>
+            <svg
+              class="linky"
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="4" cy="4" r="4" fill="#C1C7D0" />
+            </svg>
+          </li>
+          <li class="wap">2021</li>
+        </ul>
+        <figure class="modal-figure">
+          <img src=${project.image} id="modal-img" alt="Tonic project" />
+        </figure>
+      </div>
+      <div class="modal-bottom d-flex">
+        <p class="tonic-para modal-para">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Explicabo odio quisquam unde maxime minus libero repellat 
+        optio maiores cupiditate assumenda, vitae harum reprehenderit 
+        quod debitis pariatur iste accusamus? Obcaecati, voluptas.
+        </p>
+        <div class="modal-side d-flex">
+          <ul class="tonic-list modal-langs d-flex">
+            ${project.tech.map((item) => {
+                const techsList = `<li>${item}</li>`;
+                return techsList;
+              }).join('')}
+          </ul>
+          <hr class="modal-rule">
+          <div class="button-group d-flex">
+            <a class="modal-btn" href=${project.liveDemo}><span>Live demo</span> <i class='bx bx-wifi bx-sm' id='icon'></i></a>
+            <a class="modal-btn" href=${project.gitHub}><span>See source</span> <i class='bx bxl-github bx-sm'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>`
 
     <script src="jsscripts.js"></script>
   </body>
