@@ -122,94 +122,21 @@ nav {
   border-radius: 8px;
 }
 
-@media screen and (min-width: 992px) {
-  .modal-content {
-    position: fixed;
-    margin: -250px 0;
-    left: 50%;
-    width: 90%;
-    height: 25%;
-    transform: translate(-50%, 50%) scale(0);
-    z-index: 2;
-  }
-
-  .modal-side {
-    flex-direction: column;
-  }
-
-  .modal-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .m-close-head {
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  .m-close-head,
-  .modal-tonic,
-  .modal-bottom,
-  .modal-figure {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-  .modal-figure {
-    margin: 0 auto;
-    background: rgb(236, 236, 236);
-  }
-
-  .bck {
-    max-width: 100%;
-    background: rgb(243, 242, 242);
-    margin-left: 5%;
-  }
-
-  .button-group {
-    margin-top: 5px;
-    flex-direction: column;
-    gap: 5px;
-    width: 70%;
-  }
-
-  .modal-rule {
-    margin: 0 2%;
-    color: #f7f7f9;
-    border: 1px solid #ebecf0;
-  }
-
-  .modal-figure #modal-img {
-    margin: 0 auto;
-    width: 700px;
-    height: 420px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .modal-side {
-    flex-direction: column;
-  }
-
-  .modal-bottom {
-    flex-direction: column;
-  }
-
-  .m-close-head {
-    justify-content: space-between;
-    align-items: baseline;
-  }
-}
-
 .modal-content {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  z-index: 2;
+  z-index: 10;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-#overlay.active {
+.modal-content.show {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#overlay.show {
   display: block;
   position: fixed;
   top: 0;
@@ -221,51 +148,45 @@ nav {
   padding: 50% 0;
 }
 
-.modal-content.active {
-  transition: all 300ms ease-in-out;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.modal-figure {
-  width: fit-content;
-  height: auto;
-}
-
-.modal-btn {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  border: 1px solid #6070ff;
-  border-radius: 8px;
-  padding: 5px;
-  background-color: #fff;
-  text-decoration: none;
-  color: #396df2;
-}
-
-.button-group {
-  margin-bottom: 35px;
-  justify-content: space-around;
-}
-
-.button-group a {
+.modal-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.modal-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-close-head {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal-para {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: justify;
+}
+
+.close-icon {
+  color: #f16529;
+  padding-top: 15px;
 }
 
 .modal-langs {
   flex-wrap: wrap;
-  margin-top: 12px;
-  list-style: none;
-  align-items: center;
-  justify-content: start;
-  margin-bottom: 5px;
 }
 
 .modal-langs li {
@@ -283,10 +204,64 @@ nav {
   flex-wrap: wrap;
 }
 
-.modal-rule {
-  margin-bottom: 10px;
-  color: #f7f7f9;
-  border: 1px solid #ebecf0;
+.modal-btn {
+  align-items: flex-start;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: 1px solid #6070ff;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  color: #396df2;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-card-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 50px;
+  }
+
+  .modal-card {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .modal-figure {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .button-group {
+    margin: 0 auto;
+    gap: 50px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1362px) {
+  .modal-card {
+    max-width: 1500px;
+  }
+
+  .modal-card-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 50px;
+  }
+
+  .modal-figure {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -810,8 +785,6 @@ figure {
 
 img {
   width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
   text-align: center;
 }
 
