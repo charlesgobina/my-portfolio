@@ -135,9 +135,9 @@ const theCard = (project) => {
         <div class="modal-side d-flex">
           <ul class="tonic-list modal-langs d-flex">
             ${project.tech.map((item) => {
-                const techsList = `<li>${item}</li>`;
-                return techsList;
-              }).join('')}
+    const techsList = `<li>${item}</li>`;
+    return techsList;
+  }).join('')}
           </ul>
         </div>
       </div>
@@ -160,7 +160,6 @@ for (let i = 0; i < projects.length; i += 1) {
   btns.forEach((btn) => {
     btn.addEventListener('click', () => {
       if (projects[i].id === btn.dataset.target) {
-        console.log(projects[i].id, btn.dataset.target)
         modalOverlay.classList.add('show');
         document.body.style.overflow = 'hidden';
         modal.classList.add('show');

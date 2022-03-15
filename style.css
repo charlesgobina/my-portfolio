@@ -218,7 +218,6 @@ nav {
   border-radius: 8px;
   padding: 10px;
   background-color: #fff;
-  text-decoration: none;
   color: #396df2;
 }
 
@@ -228,11 +227,10 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 0 50px;
-    
   }
 
   .modal-card {
-    width: 1000px;;
+    width: 1000px;
     margin: 0 auto;
   }
 
