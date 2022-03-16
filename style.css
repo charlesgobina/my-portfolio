@@ -153,7 +153,14 @@ nav {
   flex-direction: column;
   background-color: #fff;
   padding: 20px;
+  margin: 0 10px;
   border-radius: 20px;
+  border: 3px solid #fff;
+}
+
+.modal-card:hover {
+  border-color: #a7aeff;
+  transition: all 0.9s;
 }
 
 .modal-bottom {
@@ -173,7 +180,7 @@ nav {
 
 .modal-para {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -187,6 +194,11 @@ nav {
 
 .modal-langs {
   flex-wrap: wrap;
+}
+
+#modal-img {
+  width: 100%;
+  border-radius: 20px;
 }
 
 .modal-langs li {
@@ -216,21 +228,45 @@ nav {
   letter-spacing: 0.03em;
   border: 1px solid #6070ff;
   border-radius: 8px;
-  padding: 10px;
+  padding: 5px;
   background-color: #fff;
   color: #396df2;
 }
 
+.button-group {
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.button-group a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.button-group a:hover {
+  background-color: #6070ff;
+  box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
+  transition: all 0.7s;
+  color: #fff;
+}
+
+.modal-tonic:nth-child(1) {
+  color: #6070ff;
+  font-weight: bolder;
+}
+
 @media screen and (min-width: 768px) {
   .modal-card-inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 0 50px;
   }
 
   .modal-card {
-    width: 1000px;
+    width: 700px;
     margin: 0 auto;
   }
 
@@ -246,9 +282,38 @@ nav {
   }
 }
 
-@media screen and (min-width: 1362px) {
+@media screen and (min-width: 992px) {
+  .modal-card-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 50px;
+  }
+
   .modal-card {
-    max-width: 1500px;
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  .modal-tonic {
+    margin-top: 0 !important;
+  }
+
+  .modal-figure {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .button-group {
+    margin: 0 auto;
+    gap: 50px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .modal-card {
+    width: 1000px;
   }
 
   .modal-card-inner {
@@ -630,6 +695,7 @@ nav {
     font-weight: 500;
     line-height: 24px;
     text-align: left;
+    color: #6070ff;
     text-transform: uppercase;
   }
 
@@ -785,6 +851,7 @@ figure {
 
 img {
   width: 100%;
+  border-radius: 20px;
   text-align: center;
 }
 
