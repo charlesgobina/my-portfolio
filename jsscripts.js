@@ -46,41 +46,52 @@ const projects = [
   {
     id: 'multi',
     dataTarget: 'multi',
-    projectName: 'Todo',
-    image: './assets/images/todo.png',
-    links: ['Microverse', 'Full Stack dev', '2021'],
-    description: `Todo is a web application that allow users to add tasks to the to-do list, 
-    remove completed tasks individually and collectively. Users also have the 
-    possibility update any task. Built with HTML, CSS, and JavaScript`,
-    tech: ['html', 'css', 'javascript'],
-    liveDemo: 'https://charlesgobina-todo.netlify.app/',
-    gitHub: 'https://github.com/charlesgobina/to-do',
+    projectName: 'SpaceX',
+    image: './assets/images/space.png',
+    links: ['Microverse', 'Full Stack Dev', '2022'],
+    description: `SpaceX is an app that uses real spaceX data through an API to provide commercial and scientifc flights.
+    Users can reserve rockets and join special missions in the app`,
+    tech: ['html', 'css', 'javascript', 'react', 'redux'],
+    liveDemo: 'https://startreck.netlify.app/',
+    gitHub: 'https://github.com/Hombre2014/Space-Travelers',
   },
   {
     id: 'facebook',
     dataTarget: 'facebook',
-    projectName: 'Facebook 360',
-    image: './assets/images/project-three.png',
-    links: ['Facebook', 'Full Stack dev', '2015'],
-    description: `Todo is a web application that allow users to add tasks to the to-do list, 
-    remove completed tasks individually and collectively. Users also have the 
-    possibility update any task. Built with HTML, CSS, and JavaScript`,
-    tech: ['html', 'css', 'javascript', 'ruby on rails'],
-    liveDemo: '',
-    gitHub: '',
+    projectName: 'Weather Today',
+    image: './assets/images/home.png',
+    links: ['Microverse', 'Full Stack Dev', '2022'],
+    description: `Weather-Today is a web application that enables users to get information 
+    about the weather condition of different areas around the world using an API. 
+    Users also have the possibility to search for any location.`,
+    tech: ['html', 'css', 'javascript', 'react', 'redux'],
+    liveDemo: 'https://mcrvs-weather.netlify.app/',
+    gitHub: 'https://github.com/charlesgobina/weather-today',
+  },
+  {
+    id: 'math',
+    dataTarget: 'math',
+    projectName: 'Math Magician',
+    image: './assets/images/math.png',
+    links: ['Microverse', 'Full Stack Dev', '2022'],
+    description: `Math magicians is a web app for all fans of mathematics. 
+    It is a Single Page App (SPA) that allows users to make simple calculations and read 
+    random math-related  quotes.`,
+    tech: ['html', 'css', 'javascript', 'react', 'redux'],
+    liveDemo: 'https://math-magiciani.herokuapp.com/calculator',
+    gitHub: 'https://github.com/charlesgobina/math-magiciani',
   },
   {
     id: 'uber',
     dataTarget: 'uber',
-    projectName: 'Uber Navigation',
-    image: './assets/images/project-four.png',
-    links: ['Facebook', 'Full Stack dev', '2015'],
-    description: `Todo is a web application that allow users to add tasks to the to-do list, 
-    remove completed tasks individually and collectively. Users also have the 
-    possibility update any task. Built with HTML, CSS, and JavaScript`,
-    tech: ['html', 'css', 'javascript', 'ruby on rails'],
-    liveDemo: '',
-    gitHub: '',
+    projectName: 'Bookstore',
+    image: './assets/images/book.png',
+    links: ['Microverse', 'Full Stack Dev', '2022'],
+    description: `Bookstore is a website that allows users to keep track of their favorite 
+    books by adding and removing books. Users can add a book by category too.`,
+    tech: ['html', 'css', 'javascript', 'react', 'redux'],
+    liveDemo: 'https://mcrvs-bookstore.netlify.app/',
+    gitHub: 'https://github.com/charlesgobina/bookstore',
   },
 ];
 
