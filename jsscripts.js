@@ -181,29 +181,27 @@ const stacks = document.querySelectorAll('.webin');
 chevron.forEach((chev) => {
   setInterval(() => {
     chev.style.color = '#6070ff';
-  }, 1000)
-})
+  }, 1000);
+});
 
 chevron.forEach((chev) => {
   setInterval(() => {
     chev.style.color = '#000';
-  }, 2000)
-})
-
-
+  }, 2000);
+});
 
 chevron.forEach((chev) => {
   chev.addEventListener('click', () => {
     stacks.forEach((stack) => {
-      let stackId = stack.getAttribute('id')
+      const stackId = stack.getAttribute('id');
       if (stackId === chev.dataset.stack) {
         if (stack.classList.contains('active')) {
           stack.classList.remove('active');
-          chev.classList.remove('bxs-chevron-down')
-          chev.classList.add('bxs-chevron-right')
+          chev.classList.remove('bxs-chevron-down');
+          chev.classList.add('bxs-chevron-right');
         } else {
-          chev.classList.remove('bxs-chevron-right')
-          chev.classList.add('bxs-chevron-down')
+          chev.classList.remove('bxs-chevron-right');
+          chev.classList.add('bxs-chevron-down');
           stack.classList.add('active');
         }
       }
@@ -212,8 +210,8 @@ chevron.forEach((chev) => {
 });
 
 const showStack = (stack) => {
-  let cards = `` 
-  for (let i = 0; i < stack.length; i+=1) {
+  let cards = '';
+  for (let i = 0; i < stack.length; i += 1) {
     cards += `
     <li class="stack-lang d-flex">
       <img
@@ -225,12 +223,12 @@ const showStack = (stack) => {
     </li>
   `;
   }
-  langStack.innerHTML = cards
-}
+  langStack.innerHTML = cards;
+};
 
 const showFrame = (stack) => {
-  let cards = `` 
-  for (let i = 0; i < stack.length; i+=1) {
+  let cards = '';
+  for (let i = 0; i < stack.length; i += 1) {
     cards += `
     <li class="stack-lang d-flex">
       <img
@@ -242,12 +240,12 @@ const showFrame = (stack) => {
     </li>
   `;
   }
-  frameStack.innerHTML = cards
-}
+  frameStack.innerHTML = cards;
+};
 
 const showSkill = (stack) => {
-  let cards = `` 
-  for (let i = 0; i < stack.length; i+=1) {
+  let cards = '';
+  for (let i = 0; i < stack.length; i += 1) {
     cards += `
     <li class="stack-lang d-flex">
       <img
@@ -259,8 +257,8 @@ const showSkill = (stack) => {
     </li>
   `;
   }
-  skillStack.innerHTML = cards
-}
+  skillStack.innerHTML = cards;
+};
 
 const modal = document.querySelector('.modal-content');
 const modalOverlay = document.querySelector('#overlay');
@@ -366,8 +364,8 @@ const emailChecker = () => {
 window.onload = () => {
   (emailChecker());
   showStack(languages);
-  showFrame(frameworks)
-  showSkill(skills)
+  showFrame(frameworks);
+  showSkill(skills);
 };
 
 const inputName = document.getElementById('firstname');

@@ -67,7 +67,7 @@ nav {
 }
 
 .fa-github {
-  color: #171515
+  color: #171515;
 }
 
 .fa-angellist {
@@ -108,10 +108,9 @@ nav {
     0% {
       transform: translate(0, 0);
     }
-    
+
     50% {
       transform: translate(50%, 50%);
-      
     }
 
     75% {
@@ -1090,21 +1089,21 @@ img {
 
 .webin.active {
   display: block;
-  animation: scale-display .3s;
+  animation: scale-display 0.3s;
 }
 
 @keyframes scale-display {
-	0% {
-		opacity: 0;
-		transform: scale(0);
+  0% {
+    opacity: 0;
+    transform: scale(0);
     -webkit-transform: scale(0);
-	}
+  }
 
-	100% {
-		opacity: 1;
-		transform: scale(1);
+  100% {
+    opacity: 1;
+    transform: scale(1);
     -webkit-transform: scale(1);
-	}
+  }
 }
 
 .stack-lang {
@@ -1135,6 +1134,7 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
+
   .web-stack {
     display: grid;
     grid-template-columns: repeat(4, 25%);
@@ -1171,6 +1171,7 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
+
   .web-stack {
     display: grid;
     grid-template-columns: repeat(4, 25%);
