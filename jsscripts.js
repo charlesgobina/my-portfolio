@@ -95,6 +95,171 @@ const projects = [
   },
 ];
 
+const languages = [
+  {
+    name: 'HTML',
+    icon: './assets/images/langs/html-5.png',
+  },
+  {
+    name: 'CSS',
+    icon: './assets/images/langs/css-3.png',
+  },
+  {
+    name: 'JavaScript',
+    icon: './assets/images/langs/js.png',
+  },
+  {
+    name: 'Ruby',
+    icon: './assets/images/langs/ruby.png',
+  },
+  {
+    name: 'PostgreSQL',
+    icon: './assets/images/langs/postgre.png',
+  },
+];
+
+const frameworks = [
+  {
+    name: 'React',
+    icon: './assets/images/langs/react.png',
+  },
+
+  {
+    name: 'Redux',
+    icon: './assets/images/langs/redux.png',
+  },
+
+  {
+    name: 'Sass',
+    icon: './assets/images/langs/sass.png',
+  },
+
+  {
+    name: 'Rails',
+    icon: './assets/images/langs/rubyonrails.png',
+  },
+];
+
+const skills = [
+  {
+    name: 'Jest',
+    icon: './assets/images/langs/jest.png',
+  },
+
+  {
+    name: 'Heroku',
+    icon: './assets/images/langs/heroku.png',
+  },
+
+  {
+    name: 'Netlify',
+    icon: './assets/images/langs/netlify.png',
+  },
+
+  {
+    name: 'Github',
+    icon: './assets/images/langs/github.png',
+  },
+
+  {
+    name: 'Git',
+    icon: './assets/images/langs/git.png',
+  },
+
+  {
+    name: 'Webpack',
+    icon: './assets/images/langs/webpack.png',
+  },
+];
+
+const langStack = document.querySelector('.lang-stack');
+const frameStack = document.querySelector('.frame-stack');
+const skillStack = document.querySelector('.skill-stack');
+const chevron = document.querySelectorAll('[data-stack]');
+const stacks = document.querySelectorAll('.webin');
+
+chevron.forEach((chev) => {
+  setInterval(() => {
+    chev.style.color = '#6070ff';
+  }, 1000);
+});
+
+chevron.forEach((chev) => {
+  setInterval(() => {
+    chev.style.color = '#000';
+  }, 2000);
+});
+
+chevron.forEach((chev) => {
+  chev.addEventListener('click', () => {
+    stacks.forEach((stack) => {
+      const stackId = stack.getAttribute('id');
+      if (stackId === chev.dataset.stack) {
+        if (stack.classList.contains('active')) {
+          stack.classList.remove('active');
+          chev.classList.remove('bxs-chevron-down');
+          chev.classList.add('bxs-chevron-right');
+        } else {
+          chev.classList.remove('bxs-chevron-right');
+          chev.classList.add('bxs-chevron-down');
+          stack.classList.add('active');
+        }
+      }
+    });
+  });
+});
+
+const showStack = (stack) => {
+  let cards = '';
+  for (let i = 0; i < stack.length; i += 1) {
+    cards += `
+    <li class="stack-lang d-flex">
+      <img
+        src=${stack[i].icon}
+        class="stack-icons"
+        alt="Javascript icon"
+      />
+      <p class="stack-text">${stack[i].name}</p>
+    </li>
+  `;
+  }
+  langStack.innerHTML = cards;
+};
+
+const showFrame = (stack) => {
+  let cards = '';
+  for (let i = 0; i < stack.length; i += 1) {
+    cards += `
+    <li class="stack-lang d-flex">
+      <img
+        src=${stack[i].icon}
+        class="stack-icons"
+        alt="Javascript icon"
+      />
+      <p class="stack-text">${stack[i].name}</p>
+    </li>
+  `;
+  }
+  frameStack.innerHTML = cards;
+};
+
+const showSkill = (stack) => {
+  let cards = '';
+  for (let i = 0; i < stack.length; i += 1) {
+    cards += `
+    <li class="stack-lang d-flex">
+      <img
+        src=${stack[i].icon}
+        class="stack-icons"
+        alt="Javascript icon"
+      />
+      <p class="stack-text">${stack[i].name}</p>
+    </li>
+  `;
+  }
+  skillStack.innerHTML = cards;
+};
+
 const modal = document.querySelector('.modal-content');
 const modalOverlay = document.querySelector('#overlay');
 const theCard = (project) => {
@@ -198,6 +363,9 @@ const emailChecker = () => {
 
 window.onload = () => {
   (emailChecker());
+  showStack(languages);
+  showFrame(frameworks);
+  showSkill(skills);
 };
 
 const inputName = document.getElementById('firstname');
