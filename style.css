@@ -164,6 +164,10 @@ nav {
   border-radius: 8px;
 }
 
+.modal {
+  overflow-y: auto;
+}
+
 .modal-content {
   position: fixed;
   top: 50%;
@@ -176,6 +180,7 @@ nav {
 .modal-content.show {
   transition: all 300ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);
+  border-radius: 20px;
 }
 
 #overlay.show {
@@ -241,6 +246,7 @@ nav {
 #modal-img {
   width: 100%;
   border-radius: 20px;
+  transform: scale(1);
 }
 
 .modal-langs li {
@@ -300,6 +306,21 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
+  .modal-content {
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 20px 0 !important;
+  }
+
+  .modal-content::-webkit-scrollbar {
+    width: 0.1em;
+  }
+
+  .modal-content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent;
+    border-radius: 10px;
+  }
+
   .modal-card-inner {
     display: flex;
     flex-direction: column;
@@ -325,11 +346,14 @@ nav {
 }
 
 @media screen and (min-width: 992px) {
+  .modal-content {
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
   .modal-card-inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
   }
 
   .modal-card {
@@ -354,20 +378,35 @@ nav {
 }
 
 @media screen and (min-width: 1024px) {
-  .modal-card {
-    width: 1000px;
+  .modal-content {
+    overflow-y: auto;
+    max-height: 100%;
   }
 
   .modal-card-inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
   }
 
   .modal-figure {
     width: 100%;
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .modal-content {
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  .modal-card-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-card {
+    width: 100%;
   }
 }
 
