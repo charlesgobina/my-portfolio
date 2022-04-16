@@ -6,6 +6,7 @@ This is part of my personal portfolio project. This project will test my underst
 * HTML
 * CSS
 * Figma
+* JavaScript
 
 ## Live Demo
 * [Demo](https://charlesgobina.github.io/my-portfolio/)
