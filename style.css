@@ -60,22 +60,47 @@ nav {
 
 .fa-twitter {
   color: #172b4d;
+  transition: 0.6s ease-in-out;
 }
 
 .fa-linkedin {
   color: #172b4d;
+  transition: 0.6s ease-in-out;
 }
 
 .fa-github {
   color: #172b4d;
+  transition: 0.6s ease-in-out;
 }
 
 .fa-angellist {
   color: #172b4d;
+  transition: 0.6s ease-in-out;
 }
 
 .fa-circle {
   color: #172b4d;
+  transition: 0.6s ease-in-out;
+}
+
+.fa-angellist:hover {
+  color: #6070ff;
+}
+
+.fa-circle:hover {
+  color: #6070ff;
+}
+
+.fa-github:hover {
+  color: #6070ff;
+}
+
+.fa-twitter:hover {
+  color: #6070ff;
+}
+
+.fa-linkedin:hover {
+  color: #6070ff;
 }
 
 @media screen and (max-width: 992px) {
