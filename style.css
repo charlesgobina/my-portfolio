@@ -260,8 +260,17 @@ nav {
 }
 
 .close-icon {
-  color: #f16529;
+  color: #f12929;
   padding-top: 15px;
+  cursor: pointer;
+  transition: ease-in-out 0.25s;
+}
+
+.close-icon:hover {
+  background-color: #f12929;
+  color: #fff;
+  border-radius: 20px;
+  padding-bottom: 15px;
 }
 
 .modal-langs {
@@ -467,7 +476,7 @@ nav {
     font-family: "Poppins", sans-serif;
     font-size: 15px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 20px;
     text-align: center;
   }
@@ -854,7 +863,7 @@ nav {
 
   .cards:hover {
     border-color: #a7aeff;
-    transition: all 0.9s;
+    transition: ease-in-out 0.9s;
   }
 
   .cards:nth-child(even) {
