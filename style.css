@@ -59,23 +59,23 @@ nav {
 }
 
 .fa-twitter {
-  color: #00acee;
+  color: #7f8cff;
 }
 
 .fa-linkedin {
-  color: #0e76a8;
+  color: #7f8cff;
 }
 
 .fa-github {
-  color: #171515;
+  color: #7f8cff;
 }
 
 .fa-angellist {
-  color: #171515;
+  color: #7f8cff;
 }
 
 .fa-circle {
-  color: #c1c7d0;
+  color: #7f8cff;
 }
 
 @media screen and (max-width: 992px) {
@@ -247,6 +247,7 @@ nav {
   width: 100%;
   border-radius: 20px;
   transform: scale(1);
+  object-fit: scale-down;
 }
 
 .modal-langs li {
