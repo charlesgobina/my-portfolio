@@ -71,15 +71,15 @@ const projects = [
   {
     id: 'math',
     dataTarget: 'math',
-    projectName: 'Math Magician',
-    image: './assets/images/math.png',
+    projectName: 'Budget App',
+    image: './assets/images/threecat.png',
     links: ['Microverse', 'Full Stack Dev', '2022'],
-    description: `Math magicians is a web app for all fans of mathematics. 
-    It is a Single Page App (SPA) that allows users to make simple calculations and read 
-    random math-related  quotes.`,
-    tech: ['html', 'css', 'javascript', 'react', 'redux'],
-    liveDemo: 'https://math-magiciani.herokuapp.com/calculator',
-    gitHub: 'https://github.com/charlesgobina/math-magiciani',
+    description: `This is a mobile-web app that keeps record of user transactions made on a category. 
+    Users can create new categories and add several transactions under them. 
+    It is built with ruby on rails`,
+    tech: ['html', 'css', 'javascript', 'ruby on rails'],
+    liveDemo: 'https://budget-appl.herokuapp.com/',
+    gitHub: 'https://github.com/charlesgobina/budget-app',
   },
   {
     id: 'uber',
