@@ -22,8 +22,22 @@ main {
 }
 
 nav {
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
+}
+
+strong {
+  transition: all 5s;
+  animation: color-change 10s infinite;
+}
+
+@keyframes color-change {
+  from {
+    color: #172b4d;
+  }
+  to {
+    color: #6070ff;
+  }
 }
 
 .d-flex {
@@ -317,9 +331,10 @@ nav {
 }
 
 .button-group {
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 10px;
+  padding: 0 0 30px 0;
+  gap: 10px;
 }
 
 .button-group a {
@@ -407,7 +422,7 @@ nav {
 
   .button-group {
     margin: 0 auto;
-    gap: 50px;
+    gap: 10px;
     padding-top: 10px;
   }
 }
@@ -764,20 +779,20 @@ nav {
   }
 
   .cards {
+    display: flex;
     flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
     border: 1px solid #dfe1e6;
     border-radius: 16px;
     background-color: #fff;
     max-width: max-content;
+    padding: 24px;
     margin-left: 142px;
     margin-right: 142px;
   }
 
   figure {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin: 0 !important;
   }
 
   .cards:nth-child(even) img {
@@ -791,7 +806,7 @@ nav {
   }
 
   .project-info {
-    margin-left: 24px;
+    margin-left: 0 !important;
     margin-right: 24px;
   }
 
@@ -844,7 +859,7 @@ nav {
   }
 }
 
-@media screen and (min-width: 996px) {
+@media screen and (min-width: 1200px) {
   .projects {
     margin-top: 142px;
     justify-content: center;
@@ -852,6 +867,7 @@ nav {
   }
 
   .cards {
+    display: flex;
     flex-direction: row;
     gap: 46px;
     border: 1px solid #dfe1e6;
@@ -859,6 +875,7 @@ nav {
     background-color: #fff;
     width: 80%;
     margin: 0 auto;
+    padding: 24px;
     max-width: 1156px;
   }
 
@@ -867,34 +884,23 @@ nav {
     transition: ease-in-out 0.9s;
   }
 
-  .cards:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-
   .cards:nth-child(even) .project-info {
     flex: 1;
-    margin-left: 46px;
-    margin-right: 0;
+    margin: 0 !important;
   }
 
   .cards:nth-child(odd) .project-info {
     flex: 1;
-    margin-left: 0;
-    margin-right: 46px;
+    margin: 0 !important;
   }
 
   figure {
     margin-top: 24px;
     margin-bottom: 24px;
-    margin-left: 24px;
-    flex-shrink: 2;
   }
 
   .cards:nth-child(even) figure {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-right: 22px;
-    margin-left: 0;
+    margin: 0 !important;
     padding-left: 0;
   }
 
@@ -963,6 +969,7 @@ nav {
 
 figure {
   margin-top: 16px;
+  padding: 0 16px;
 }
 
 img {
