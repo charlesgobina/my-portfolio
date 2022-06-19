@@ -140,26 +140,7 @@ strong {
     align-items: center;
     gap: 40px;
     text-align: center;
-    animation: trans 1s;
     transition: 0.6s ease-in-out;
-  }
-
-  @keyframes trans {
-    0% {
-      transform: translate(0, 0);
-    }
-
-    50% {
-      transform: translate(50%, 50%);
-    }
-
-    75% {
-      transform: translate(25%, -25%);
-    }
-
-    100% {
-      transform: translate(0, 0);
-    }
   }
 
   .menu-container .trans {
