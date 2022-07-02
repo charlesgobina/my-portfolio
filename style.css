@@ -1055,6 +1055,7 @@ img {
   text-decoration: none;
   color: #396df2;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .tonic-btn:hover {
