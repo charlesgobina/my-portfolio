@@ -75,27 +75,27 @@ strong {
 
 .fa-twitter {
   color: #172b4d;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in;
 }
 
 .fa-linkedin {
   color: #172b4d;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in;
 }
 
 .fa-github {
   color: #172b4d;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in;
 }
 
 .fa-angellist {
   color: #172b4d;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in;
 }
 
 .fa-circle {
   color: #172b4d;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in;
 }
 
 .fa-angellist:hover {
